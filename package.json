@@ -1,13 +1,12 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "wiss2019-website",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "WISS 2019 website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "WISS organizing committee",
   "dependencies": {
     "gatsby": "^2.1.4",
     "gatsby-image": "^2.0.29",
-    "gatsby-plugin-manifest": "^2.0.17",
     "gatsby-plugin-offline": "^2.0.23",
     "gatsby-plugin-react-helmet": "^3.0.6",
     "gatsby-plugin-sharp": "^2.0.20",
@@ -32,9 +31,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/WISSOrg/web2019"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/WISSOrg/web2019/issues"
   }
 }
