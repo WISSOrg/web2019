@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container, Divider, Header, Segment } from 'semantic-ui-react';
-import Wiss00 from '../images/wiss2018-0.png'
-import Gradient from './gradient'
+import Wiss00 from '../images/wiss2018-0.png';
+import Gradient from './gradient';
+import Vignette from './vignette';
 
 export default (props) => (
   <Segment inverted textAlign='center' vertical style={{
@@ -11,39 +12,30 @@ export default (props) => (
   }}>
     <div style={{
       width: '100%',
-  		height: '100%',
-  		zIndex: 0,
+      height: '100%',
+      zIndex: 0,
       backgroundImage: `url(${Wiss00})`,
       backgroundSize: 'cover',
-  		position: 'absolute',
-  		top: '50%',
-  		left: '50%',
-  		transform: 'translate(-50%, -50%) scale(1.1)',
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%) scale(1.1)',
       webkiFilter: 'blur(4px)',
-  		MozFilter: 'blur(4px)',
-  		OFilter: 'blur(4px)',
-  		msFilter: 'blur(4px)',
-  		filter: 'blur(4px)'
+      MozFilter: 'blur(4px)',
+      OFilter: 'blur(4px)',
+      msFilter: 'blur(4px)',
+      filter: 'blur(4px)'
     }}>
     </div>
     <Gradient zIndex={1} />
+    { props.main ? <Vignette zIndex={2} /> : null}
     <div style={{
       width: '100%',
-  		height: '100%',
-  		zIndex: 2,
-  		top: '0%',
-  		left: '0%',
-  		position: 'absolute',
-  		background: 'radial-gradient(ellipse closest-corner at center, rgba(0,0,0,0.0), rgba(0,0,0,0.5))'
-    }}>
-    </div>
-    <div style={{
-      width: '100%',
-  		height: '100%',
-  		zIndex: 3,
-  		top: '0%',
-  		left: '0%',
-  		position: 'absolute',
+      height: '100%',
+      zIndex: 3,
+      top: '0%',
+      left: '0%',
+      position: 'absolute',
       justifyContent: 'center',
       alignItems: 'center',
       display: 'flex'
