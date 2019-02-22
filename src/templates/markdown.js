@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 import { Container, Divider } from 'semantic-ui-react';
 import PageFooter from '../components/pagefooter';
 import PageHeader from '../components/pageheader';
+import '../styles/markdown.css';
 
 const Template = ({data}) => {
   const { markdownRemark: post } = data;
