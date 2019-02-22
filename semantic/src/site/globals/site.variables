@@ -1,3 +1,14 @@
 /*******************************
      User Global Variables
 *******************************/
+
+@fontName          : 'M PLUS 1p';
+@fontSmoothing     : antialiased;
+
+@headerFont        : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@pageFont          : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+
+@googleFontName    : 'M+PLUS+1p';
+@importGoogleFonts : true;
+@googleFontSizes   : '400,800';
+@googleSubset      : 'japanese';
