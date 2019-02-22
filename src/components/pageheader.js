@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Divider, Header, Segment } from 'semantic-ui-react';
 import Wiss00 from '../images/wiss2018-0.png'
+import Gradient from './gradient'
 
 export default () => (
   <Segment inverted textAlign='center' vertical style={{
@@ -25,17 +26,7 @@ export default () => (
   		filter: 'blur(4px)'
     }}>
     </div>
-    <div style={{
-      width: '100%',
-  		height: '100%',
-  		zIndex: 1,
-      backgroundImage: 'linear-gradient(150deg, rgba(70, 50, 90, 0.85), rgba(0, 20, 30, 0.95))',
-      backgroundSize: 'cover',
-  		position: 'absolute',
-  		top: '0%',
-  		left: '0%',
-    }}>
-    </div>
+    <Gradient zIndex={1} />
     <div style={{
       width: '100%',
   		height: '100%',
