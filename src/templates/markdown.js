@@ -1,4 +1,5 @@
 import { graphql } from 'gatsby';
+import { Link } from "gatsby"
 import React from 'react';
 import Helmet from 'react-helmet';
 import Footer from '../components/footer';
@@ -11,6 +12,7 @@ const Template = ({data}) => {
   return (
       <div>
         <Helmet title={`${title} - WISS 2019`}/>
+        <Link to="/">Home</Link> / <Link to="/call-for-papers">Call for Papers</Link>
         <div dangerouslySetInnerHTML={{__html: html}}/>
         <Footer />
       </div>
