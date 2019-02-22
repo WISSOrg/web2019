@@ -12,3 +12,12 @@
 @importGoogleFonts : true;
 @googleFontSizes   : '400,800';
 @googleSubset      : 'japanese';
+
+@emSize   : 16px;
+@fontSize : 16px;
+
+@pageBackground      : #f0f0f2;
+@pageOverflowX       : hidden;
+
+@lineHeight          : 1.5em;
+@textColor           : rgba(5, 5, 10, 0.85);
