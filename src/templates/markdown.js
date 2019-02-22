@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import React from 'react';
 import Helmet from 'react-helmet';
 import Footer from '../components/footer';
-import { Container } from 'semantic-ui-react';
+import { Container, Divider, Header, Segment } from 'semantic-ui-react';
 
 const Template = ({data}) => {
   const { markdownRemark: post } = data;
@@ -11,12 +11,22 @@ const Template = ({data}) => {
   const { title } = frontmatter;
 
   return (
-    <Container>
-      <Helmet title={`${title} - WISS 2019`}/>
-      <Link to="/">Home</Link> / <Link to="/call-for-papers">Call for Papers</Link>
-      <div dangerouslySetInnerHTML={{__html: html}}/>
+    <div>
+      <Segment inverted textAlign='center' vertical>
+        <Container text style={{ paddingTop: '300px', paddingBottom: '300px' }}>
+          <Header as='h1' inverted>WISS 2019</Header>
+          <Header as='h2' inverted>第27回インタラクティブシステムとソフトウェアに関するワークショップ</Header>
+        </Container>
+      </Segment>
+      <Container>
+        <Helmet title={`${title} - WISS 2019`}/>
+        <Link to="/">Home</Link> / <Link to="/call-for-papers">Call for Papers</Link>
+        <Divider />
+        <div dangerouslySetInnerHTML={{__html: html}}/>
+        <Divider />
+      </Container>
       <Footer />
-    </Container>
+    </div>
   );
 };
 
