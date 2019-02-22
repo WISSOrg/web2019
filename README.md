@@ -1,5 +1,7 @@
 # web2019
 
+Warning: This repository may contain information that is not officially confirmed.
+
 ## Prerequisites
 
 - gatsby-cli
@@ -19,4 +21,11 @@ yarn start
 
 ```
 yarn build
+```
+
+## Rebuild Semantic UI
+
+```
+cd semantic
+gulp
 ```
