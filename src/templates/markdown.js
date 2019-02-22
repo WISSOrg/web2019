@@ -2,8 +2,9 @@ import { graphql } from 'gatsby';
 import { Link } from "gatsby"
 import React from 'react';
 import Helmet from 'react-helmet';
-import Footer from '../components/footer';
-import { Container, Divider, Header, Segment } from 'semantic-ui-react';
+import PageFooter from '../components/pagefooter';
+import PageHeader from '../components/pageheader';
+import { Container, Divider } from 'semantic-ui-react';
 
 const Template = ({data}) => {
   const { markdownRemark: post } = data;
@@ -12,12 +13,7 @@ const Template = ({data}) => {
 
   return (
     <div>
-      <Segment inverted textAlign='center' vertical>
-        <Container text style={{ padding: '300px 0px' }}>
-          <Header as='h1' inverted>WISS 2019</Header>
-          <p>第27回インタラクティブシステムとソフトウェアに関するワークショップ</p>
-        </Container>
-      </Segment>
+      <PageHeader />
       <Container>
         <Helmet title={`${title} - WISS 2019`}/>
         <Divider />
@@ -26,7 +22,7 @@ const Template = ({data}) => {
         <div dangerouslySetInnerHTML={{__html: html}}/>
         <Divider />
       </Container>
-      <Footer />
+      <PageFooter />
     </div>
   );
 };
