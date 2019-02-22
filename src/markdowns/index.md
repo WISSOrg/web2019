@@ -7,8 +7,6 @@ excerpt: "WISS 2019: 第27回インタラクティブシステムとソフトウ
 
 # WISS 2019: 第27回インタラクティブシステムとソフトウェアに関するワークショップ
 
-<!-- The 27th Workshop on Interactive Systems and Software (WISS 2019) -->
-
 ----
 
 - 主催：日本ソフトウェア科学会 インタラクティブシステムとソフトウェア研究会

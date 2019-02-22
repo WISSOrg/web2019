@@ -38,7 +38,7 @@ export default (props) => (
       alignItems: 'center',
       display: 'flex'
     }}>
-      <Container text style={{ opacity: 0.9 }}>
+      <Container text style={{ opacity: 0.8 }}>
         { props.main
           ?
             <div>

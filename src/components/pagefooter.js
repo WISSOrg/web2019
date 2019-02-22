@@ -16,7 +16,7 @@ export default () => (
       alignItems: 'center',
       display: 'flex'
     }}>
-      <Container>
+      <Container style={{ opacity: 0.8 }}>
         <p>&copy; WISS 2019実行委員会</p>
       </Container>
     </div>
