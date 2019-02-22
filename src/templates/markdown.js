@@ -15,7 +15,7 @@ const Template = ({data}) => {
   return (
     <div>
       <PageHeader main={path === "/"} />
-      <Container text>
+      <Container text={path === "/"}>
         <Helmet title={`${title} - WISS 2019`}/>
         <Divider hidden />
         <Link to="/">Home</Link> / <Link to="/call-for-papers">Call for Papers</Link> / Program / About
