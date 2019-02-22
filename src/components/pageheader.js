@@ -3,10 +3,10 @@ import { Container, Divider, Header, Segment } from 'semantic-ui-react';
 import Wiss00 from '../images/wiss2018-0.png'
 import Gradient from './gradient'
 
-export default () => (
+export default (props) => (
   <Segment inverted textAlign='center' vertical style={{
     overflow: 'hidden',
-    height: '100vh',
+    height: `${ props.main ? '100vh' : '100px' }`,
     width: '100%'
   }}>
     <div style={{
@@ -39,11 +39,18 @@ export default () => (
       display: 'flex'
     }}>
       <Container text style={{ opacity: 0.9 }}>
-        <Divider style={{ borderBottomWidth: '3px' }} />
-        <Header style={{ fontSize: '5em' }} as='h1' inverted>WISS 2019</Header>
-        <p>第27回インタラクティブシステムとソフトウェアに関するワークショップ</p>
-        <p>The 27th Workshop on Interactive Systems and Software</p>
-        <Divider style={{ borderBottomWidth: '3px' }} />
+        { props.main
+          ?
+            <div>
+              <Divider style={{ borderBottomWidth: '3px' }} />
+              <Header style={{ fontSize: '5em' }} as='h1' inverted>WISS 2019</Header>
+              <p>第27回インタラクティブシステムとソフトウェアに関するワークショップ</p>
+              <p>The 27th Workshop on Interactive Systems and Software</p>
+              <Divider style={{ borderBottomWidth: '3px' }} />
+            </div>
+          :
+            <Header as='h3' inverted>WISS 2019</Header>
+        }
       </Container>
     </div>
   </Segment>

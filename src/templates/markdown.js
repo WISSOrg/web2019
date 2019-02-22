@@ -2,25 +2,25 @@ import { graphql } from 'gatsby';
 import { Link } from "gatsby"
 import React from 'react';
 import Helmet from 'react-helmet';
+import { Container, Divider } from 'semantic-ui-react';
 import PageFooter from '../components/pagefooter';
 import PageHeader from '../components/pageheader';
-import { Container, Divider } from 'semantic-ui-react';
 
 const Template = ({data}) => {
   const { markdownRemark: post } = data;
   const { frontmatter, html } = post;
-  const { title } = frontmatter;
+  const { title, path } = frontmatter;
 
   return (
     <div>
-      <PageHeader />
-      <Container>
+      <PageHeader main={path === "/"} />
+      <Container text>
         <Helmet title={`${title} - WISS 2019`}/>
+        <Divider hidden />
+        <Link to="/">Home</Link> / <Link to="/call-for-papers">Call for Papers</Link> / Program / About
         <Divider />
-        <Link to="/">Home</Link> / <Link to="/call-for-papers">Call for Papers</Link>
-        <Divider />
-        <div dangerouslySetInnerHTML={{__html: html}}/>
-        <Divider />
+        <div dangerouslySetInnerHTML={{__html: html}} />
+        <Divider hidden />
       </Container>
       <PageFooter />
     </div>
