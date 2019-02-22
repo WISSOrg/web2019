@@ -13,13 +13,14 @@ const Template = ({data}) => {
   return (
     <div>
       <Segment inverted textAlign='center' vertical>
-        <Container text style={{ paddingTop: '300px', paddingBottom: '300px' }}>
+        <Container text style={{ padding: '300px 0px' }}>
           <Header as='h1' inverted>WISS 2019</Header>
-          <Header as='h2' inverted>第27回インタラクティブシステムとソフトウェアに関するワークショップ</Header>
+          <p>第27回インタラクティブシステムとソフトウェアに関するワークショップ</p>
         </Container>
       </Segment>
       <Container>
         <Helmet title={`${title} - WISS 2019`}/>
+        <Divider />
         <Link to="/">Home</Link> / <Link to="/call-for-papers">Call for Papers</Link>
         <Divider />
         <div dangerouslySetInnerHTML={{__html: html}}/>
