@@ -1,6 +1,7 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 import Helmet from 'react-helmet';
+import Footer from '../components/footer';
 
 const Template = ({data}) => {
   const {markdownRemark: post} = data;
@@ -9,8 +10,9 @@ const Template = ({data}) => {
 
   return (
       <div>
-        <Helmet title={`${title} - test site`}/>
+        <Helmet title={`${title} - WISS 2019`}/>
         <div dangerouslySetInnerHTML={{__html: html}}/>
+        <Footer />
       </div>
   );
 };
@@ -25,7 +27,7 @@ export const pageQuery = graphql`
         path
         excerpt
       }
-    } 
+    }
   }
 `;
 
