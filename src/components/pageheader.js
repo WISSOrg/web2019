@@ -34,6 +34,16 @@ export default (props) => (
   		top: '0%',
   		left: '0%',
   		position: 'absolute',
+  		background: 'radial-gradient(ellipse closest-corner at center, rgba(0,0,0,0.0), rgba(0,0,0,0.5))'
+    }}>
+    </div>
+    <div style={{
+      width: '100%',
+  		height: '100%',
+  		zIndex: 3,
+  		top: '0%',
+  		left: '0%',
+  		position: 'absolute',
       justifyContent: 'center',
       alignItems: 'center',
       display: 'flex'
