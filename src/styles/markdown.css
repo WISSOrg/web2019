@@ -24,3 +24,11 @@ h2::before, h2::after {
   width: 50%;
   background-repeat: no-repeat;
 }
+
+li > p {
+  margin-bottom: 0em;
+}
+
+li {
+  margin: 0.2em 0em;
+}
