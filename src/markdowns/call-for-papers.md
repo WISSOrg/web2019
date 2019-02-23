@@ -24,24 +24,38 @@ excerpt: "論文募集"
 
 ## その他の募集
 
-- 会議をサポートするシステムの提案（[WISS Challenge](/XXX)）を募集します。
-- 予稿集の[表紙デザイン](/XXX)を公募します。
+- 会議をサポートするシステムの提案（[WISS Challenge](/challenge)）を募集します。
+- 予稿集の[表紙デザイン](/design-competition)を公募します。
 
 ## 登壇発表
 
 ### 概要
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+- 6ページ以内の論文（日本語あるいは英語）をPDFで提出してください。
+  - 2017年までは論文投稿時点で「ロング論文」と「ショート論文」の種別がありましたが2018年はその種別を廃止しました。
+- 投稿原稿には著者名や所属を明記ください（シングルブラインド査読）。著者らの関連論文を Reference から削除する必要はありません。
+- 論文テンプレートは既定のものを利用してください:
+  - [論文テンプレート（Word）]()
+  - [論文テンプレート（LaTeX2e）]()
+- 査読方針および査読フォームも以下を参照してください:
+  - [査読方針]()
+  - [査読フォーム]()
+- WISS2018 では査読方針に関して昨年までとは異なる部分がありますので、論文の執筆の際には査読方針をよくお読み頂きますようお願い致します。
 
 ### 提出物について
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+- 論文投稿の際、参考資料としてデモビデオ（動画ファイル）の提出を推奨します。できるだけ多くの査読者のコンピュータ環境で見られるように、なるべく標準的なファイルフォーマットで、100Mバイト以下のファイルサイズで提出をお願いします。採録時にデモビデオの公開を「希望する」場合は、投稿時に意思表示してください。
+- __採録論文についてはカメラレディの提出をお願いします__ 。投稿時と同一フォーマットです。査読コメントを参照の上、論文をブラッシュアップしてください。
+- カメラレディの提出と同時に、Webに掲載するアブストラクトと代表画像もお送りください。アブストラクトの公開は採択通知後できるだけ速やかに行います（詳しくは、ページ下部のスケジュールをご確認ください）。
+- WISS2018では __論文のタイトル・アブストラクトのウェブ公開を8月10日頃に、また論文本体のウェブ公開を開催1週間前の9月19日__ に予定しています。特許申請の関係などで公開を遅らせてほしい場合には申し出てください。
 
 ### 未来ビジョンについて
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+論文本体とは別に、「この研究はどういう未来を切り拓くのか」について、著者の視点からアピールしたい点があれば、「未来ビジョン」とした節を設けて自由に議論してください。査読にあたっては、基本的に論文本体のみを対象とし、未来ビジョン部分は査読の対象外とします。自由に論じて頂いて構いませんが、本文のページ数を圧迫しないようにご注意ください。
 
 ### 「評価論文」「コンセプト論文」「サーベイ論文」の扱いについて
+
+WISSでは伝統的に、「アイディアの斬新さ」及び「デモや実装による有効性のアピール」を重視します。一方で、多くの論文誌や国際会議で重視される「評価（User Study や Evaluation）」については、記述が無い場合でも減点対象とはしません。適切に行われた「評価」は加点対象ですが、既存のシステムや現象に対して「評価」のみを行った論文（いわゆる「評価論文」）のスコアは低くなる場合があります（デモや実装を伴わない論文（いわゆる「コンセプト論文」）も同様です）。投稿される際には御注意ください。なお、特定の研究分野の動向を俯瞰した「サーベイ論文」については、WISSの趣旨（＝新しいアイディアの実装）とはズレる為、本会議での採録は難しいと思われますが、参加者にとって特に有益な内容であると判断された場合、「特別講演」などとして発表の機会が与えられる場合があります。
 
 ### 「議論を呼ぶ論文」枠について
 
@@ -60,44 +74,82 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## デモンストレーション・ポスター発表（論文のWeb掲載あり）
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+- WISS2018 では、デモ・ポスター発表の論文は「紙の予稿集への掲載はありません」（WEB掲載のみとなります）。
+- 割り当てられたスペースでデモまたはポスターによる発表をしていただきます。
+- 2ページ以内の論文（日本語あるいは英語）をPDFで提出してください。
+- 論文テンプレートは既定のものを利用してください:
+  - [論文テンプレート（Word）]()
+  - [論文テンプレート（LaTeX2e）]()
+- 特別な場合を除き、投稿された原稿がそのままWEBに掲載されますので、誤字脱字や不明瞭な表現が無いよう、十分にチェックの上投稿ください（共著者によるチェックも投稿前に受けてください）。
+- 当日展示用のポスターは提出していただく必要はありません。また形式も任意です。
+
+- デモ・ポスター発表は、原則査読はありませんが、枠が限られているため、応募件数によっては早期に締め切る可能性があります。また、学会発表である以上、単に思いつきだけでなく、議論に値するだけの材料・根拠をそろえた上で投稿してください。内容が不適切だとプログラム委員会が判断した場合は、不採択となる可能性があります。既発表論文についての扱いは論文の[査読方針]()に準じます。
+- 論文本体とは別に、「この研究はどういう未来を切り拓くのか」について、著者の視点からアピールしたい点があれば、「未来ビジョン」とした節を設けて自由に議論してください。査読にあたっては、基本的に論文本体のみを対象とし、未来ビジョン自体は査読の対象外とします。自由に論じて頂いて構いませんが、本文のページ数を圧迫しないようにご注意ください。
+- 展示に関する制約の詳細（利用いただける面積、ポスターの横幅制限、電力等）は後日調整となります。詳細はデモ・ポスターチェアにお問い合わせください。
 
 ## デモンストレーション・ポスター発表（論文のWeb掲載なし）
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+- 発表枠に余裕がある場合、「論文のWEB掲載を行わない」デモ・ポスター発表も受け付けます。出来立てのホットなデモはもちろんですが、研究を始めたばかりで実装が十分でない場合でも、研究計画について十分に説明できるようであれば、ポスターとして発表すれば、来場者から有用なアドバイスを受けることができるでしょう。発表者が学生の場合には、発表者割引の適用対象となります。発表枠が一杯になった場合には申込期限前に募集を打ち切る可能性があります。また、「論文WEB掲載あり」の発表を優先してレイアウトを割り当ててから残った空きスペースを割り当てますので、デモに最適な環境が十分に確保できない可能性がありますのでご了承ください。
+- 希望する場合には、発表の題目・著者名・概要・展示内容の簡単な説明（デモかポスターか。デモなら机の上で済むか、もっと大がかりか）をつけて投稿システムから申し込みしてください。その後、担当者から発表者専用登録サイトのURLを通知するので、参加登録を行ってください。
 
 ## スケジュール
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+日程|内容
+--|--
+2018年03月19日（月） | 論文募集ページ（当ページ）公開
+2018年XX月XX日（XX） | 登壇発表投稿サイトオープン
+2018年06月01日（金） | 登壇発表論文投稿〆切（6/2 00:00 (JST) に投稿サイト閉鎖）
+2018年06月02日（土） | デモ・ポスター発表（論文のWEB掲載あり）投稿サイトオープン（先着順）
+2018年06月08日（金） | 予稿集表紙デザイン・ウェブデザイン募集〆切
+2018年07月10日（火） | 登壇発表採択結果通知（採録コメント含む）
+2018年07月31日（火） | デモ・ポスター発表（論文のWEB掲載あり）投稿受付〆切（8/1 00:00 (JST) に投稿サイト閉鎖）
+2018年08月01日（水） | デモ・ポスター発表（論文のWEB掲載なし）受付開始（先着順）
+2018年08月10日頃 | プログラム公開（※「アブストラクト公開延期」を事前指定されたもの以外は、アブストラクトと採録コメントも公開されます）
+2018年09月19日（水） | 採録論文（採録コメント及び査読コメント含む）公開
 
 ## 注意
 
 ### 投稿にあたって
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+- 反社会的な内容や研究手法が含まれている場合は不採録となります。
+- 著作権などの他者の権利を侵害しないよう注意してください。
+- 研究機関内外の情報委員会や倫理委員会などにおける承認手続きが必要となる調査・研究・実験などの場合は、手続きの状況を具体的に記述してください。
+- 本文とリファレンスを含め、規定ページ枚以内におさめてください。
 
 ### 発表にあたって
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+- 採択された登壇発表論文は論文集に掲載されます。会場内LANでも配布される他、ワークショップ開始時には、論文本体と「採録判定時のコメント」に加え、全ての査読コメントもインターネット上で一般公開されます。
+- 「論文のWEB掲載有り」のデモ・ポスター発表論文は、会場内LANで配布される他、ワークショップ開始時には、インターネット上で一般公開されます。
+- 論文の著作権は著者に帰属します。
+- 原則として、すべての登壇発表の外部への動画中継を予定しています。動画中継を行っても「特許法第30条 発明の新規性喪失の例外規定」は適用されますので、発表予定の内容に特許が関わっていても、発表後（動画中継後）に特許出願は可能です。知財は先願性ですので早めに出願されることを推奨しますが、動画中継が公知日に影響を与えるわけではありませんので、その点はご承知下さい。参考：特許庁「[発明の新規性喪失の例外規定の適用を受けるための手続について](http://www.jpo.go.jp/shiryou/kijun/kijun2/hatumei_reigai.htm)」
 
 ### 参加にあたって
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+- WISSは合宿形式のワークショップで、2泊3日の宿泊参加をして頂くことが前提となります。部分参加でも宿泊費等の減額は原則ありませんのでご注意ください。
+- 参加費の学生割引が適用されるのは、登壇発表、デモ・ポスター（予稿集なしを含む）、WISS Challenge のいずれかで著者に含まれている学生のみとする予定です（筆頭でなくとも可）。参加を希望される学生はなんらかの形での発表を期待します。
 
 ## 論文テンプレート
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+ダウンロード時のブラウザはGoogle Chromeを推奨しています。（他ブラウザの場合文字化け等の不具合が生じる可能性があります。）
+
+- [WISS2018 LaTeX2e 投稿用スタイルファイル]() (著者名及び所属を入れてください。Macご利用の方で、コンパイルに失敗する場合はソースコードをutf8に変更して試してみてください)
+- [WISS2018 MS Word 投稿用スタイルファイル]() (著者名及び所属を入れてください。)
+- [WISS2018 論文よくあるミス一覧]()
+
+- 原稿フォーマットは下記の論文テンプレート（LaTeX2eのスタイルファイル、またはWordファイル）をご利用ください。PDFのファイルサイズは20Mバイト以下とします。
+- 原稿フォーマットが著しく異なる場合は不採択となる場合があります。
+- 注意：一部のWordにおいて項番号が画像で出力されることがあります。その場合は、テンプレート2.2.2項及び表1を参考に、項番号部分にスタイルの再指定（1.1.1 段落番号3を指定）を行ってください。それでも改善しない場合はお手数ですが、手打ちで項番号を付与してください。
 
 ## 投稿受付システム
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+（準備中）
 
 ## 問い合わせ
 
 ### 原稿作成（論文テンプレート）に関する問い合わせ先
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+WISS2018 出版担当 中村 裕美 2018pub <at> wiss.org
 
 ### 原稿アップロードサイト、原稿提出締切、デモ・ポスター展示の方法等に関する問い合わせ先
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+2018 <at> wiss.org
