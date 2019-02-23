@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `WISS 2019`,
-    description: `hoge.`,
-    author: `@wissorg`,
+    description: `WISS 2019.`,
+    author: `WISS 2019実行委員会`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
