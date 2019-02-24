@@ -7,13 +7,15 @@ Warning: This repository may contain information that is not officially confirme
 - gatsby-cli
 - yarn
 
-## Clone & Develop & Build
+## Clone & Install
 
 ```
 git clone https://github.com/WISSOrg/web2019.git
 cd web2019
 yarn install
 ```
+
+## Develop & Build
 
 ```
 yarn start
