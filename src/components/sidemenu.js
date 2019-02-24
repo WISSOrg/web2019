@@ -17,7 +17,7 @@ export default class SideMenu extends Component {
         visible={visible}
       >
         <Menu.Item>
-          <Link to="/"><img src={WissIcon} width='100%' /></Link>
+          <Link to="/"><img src={WissIcon} style={{ width: '100%' }} alt='WISS' /></Link>
         </Menu.Item>
         <Divider horizontal>
           <Header inverted as='h5'>参加募集</Header>
