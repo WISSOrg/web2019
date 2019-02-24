@@ -40,7 +40,7 @@ export default class Template extends Component {
           <SideMenu animation={true} visible={visible} />
           <Sidebar.Pusher dimmed={visible} onClick={this.hideMenu}>
             <PageHeader main={path === "/"} />
-            <Container text={path === "/"}>
+            <Container text={path === "/"} style={{ minHeight: '100vh' }}>
               <Helmet title={`${title} - WISS 2019`}/>
               <Divider hidden />
               <Button onClick={this.toggleMenu}>Show Menu</Button>
