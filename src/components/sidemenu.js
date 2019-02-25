@@ -65,6 +65,9 @@ export default class SideMenu extends Component {
           <Header inverted as='h5'>WISSについて</Header>
         </Divider>
         <Menu.Item>
+          <Link to="/archive">過去のWISS</Link>
+        </Menu.Item>
+        <Menu.Item>
           （TBA)
         </Menu.Item>
       </Sidebar>
