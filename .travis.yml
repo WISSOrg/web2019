@@ -18,6 +18,7 @@ install:
   - yarn global add gatsby-cli
 
 script:
+  - yarn install
   - yarn build
 addons:
   ssh_known_hosts: wiss.org
