@@ -32,4 +32,4 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: rsync -avr --delete-after --quiet $TRAVIS_BUILD_DIR/dist/ travis@wiss.org:$DEST_DIR
+  script: rsync -avr --delete-after --quiet $TRAVIS_BUILD_DIR/public/ travis@wiss.org:$DEST_DIR
