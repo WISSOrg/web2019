@@ -31,3 +31,7 @@ yarn build
 cd semantic
 gulp
 ```
+
+## Travis CI
+
+Whenever you push to the `master` branch, Travis CI process runs to build files and deploy (copy) them to the web server.
