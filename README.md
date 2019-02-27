@@ -1,5 +1,7 @@
 # web2019
 
+[![Build Status](https://travis-ci.org/WISSOrg/web2019.svg?branch=master)](https://travis-ci.org/WISSOrg/web2019)
+
 Warning: This repository may contain information that is not officially confirmed.
 
 ## Prerequisites
