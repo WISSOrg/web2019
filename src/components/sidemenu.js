@@ -41,6 +41,9 @@ export default class SideMenu extends Component {
           <Link to="/call-for-papers">論文募集</Link>
         </Menu.Item>
         <Menu.Item>
+          <Link to="/review_policy">査読方針</Link>
+        </Menu.Item>
+        <Menu.Item>
           （TBA)
         </Menu.Item>
         <Divider horizontal>
