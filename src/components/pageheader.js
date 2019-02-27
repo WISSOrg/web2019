@@ -1,34 +1,17 @@
 import React from 'react';
-import { Container, Divider, Header, Segment } from 'semantic-ui-react';
-import Wiss00 from '../images/wiss2018-0.png';
+import { Button, Container, Segment } from 'semantic-ui-react';
 import Gradient from './gradient';
-import Vignette from './vignette';
 
 export default (props) => (
-  <Segment inverted textAlign='center' vertical style={{
+  <Segment inverted vertical onClick={props.hideMenu} style={{
     overflow: 'hidden',
-    height: `${ props.main ? '100vh' : '100px' }`,
-    width: '100%'
+    height: '72px',
+    width: '100%',
+    position: 'fixed',
+    top:'0px',
+    zIndex: '12',
   }}>
-    <div style={{
-      width: '100%',
-      height: '100%',
-      zIndex: 0,
-      backgroundImage: `url(${Wiss00})`,
-      backgroundSize: 'cover',
-      position: 'absolute',
-      top: '50%',
-      left: '50%',
-      transform: 'translate(-50%, -50%) scale(1.1)',
-      webkiFilter: 'blur(4px)',
-      MozFilter: 'blur(4px)',
-      OFilter: 'blur(4px)',
-      msFilter: 'blur(4px)',
-      filter: 'blur(4px)'
-    }}>
-    </div>
     <Gradient zIndex={1} />
-    { props.main ? <Vignette zIndex={2} /> : null}
     <div style={{
       width: '100%',
       height: '100%',
@@ -40,19 +23,9 @@ export default (props) => (
       alignItems: 'center',
       display: 'flex'
     }}>
-      <Container text style={{ opacity: 0.8 }}>
-        { props.main
-          ?
-            <div>
-              <Divider style={{ borderBottomWidth: '3px' }} />
-              <Header style={{ fontSize: '5em' }} as='h1' inverted>WISS 2019</Header>
-              <p>第27回インタラクティブシステムとソフトウェアに関するワークショップ</p>
-              <p>The 27th Workshop on Interactive Systems and Software</p>
-              <Divider style={{ borderBottomWidth: '3px' }} />
-            </div>
-          :
-            <Header as='h3' inverted>WISS 2019</Header>
-        }
+      <Container style={{ opacity: '0.8', textAlign: 'left' }}>
+        <Button floated='right' icon='bars' onClick={props.toggleMenu} style={{}} />
+        <span style={{ fontSize: '1.2em', fontWeight: 'bold', position: 'absolute', top: '50%', transform: 'translateY(-50%)'}}>WISS 2019</span>
       </Container>
     </div>
   </Segment>

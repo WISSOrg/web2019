@@ -10,11 +10,12 @@ export default class SideMenu extends Component {
     return (
       <Sidebar
         as={Menu}
-        animation='uncover'
+        animation='overlay'
         direction='left'
         inverted
         vertical
         visible={visible}
+        style={{ zIndex: '20' }}
       >
         <Menu.Item>
           <Link to="/"><img src={WissIcon} style={{ width: '100%' }} alt='WISS' /></Link>

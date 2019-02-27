@@ -1,7 +1,8 @@
 import { graphql } from 'gatsby';
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-import { Button, Container, Divider, Segment, Sidebar } from 'semantic-ui-react';
+import { Container, Divider, Segment, Sidebar } from 'semantic-ui-react';
+import Masthead from '../components/masthead';
 import PageFooter from '../components/pagefooter';
 import PageHeader from '../components/pageheader';
 import SideMenu from '../components/sidemenu';
@@ -36,14 +37,14 @@ export default class Template extends Component {
 
     return (
       <div>
-        <Sidebar.Pushable as={Segment} style={{ borderWidth: '0px', borderRadius: '0px' }}>
+        <PageHeader toggleMenu={this.toggleMenu} hideMenu={this.hideMenu} />
+        { path === "/" ? <Masthead hideMenu={this.hideMenu} /> : null }
+        <Sidebar.Pushable as={Segment} style={{ borderWidth: '0px', borderRadius: '0px', margin: '0px' }}>
           <SideMenu animation={true} visible={visible} />
-          <Sidebar.Pusher dimmed={visible} onClick={this.hideMenu}>
-            <PageHeader main={path === "/"} />
-            <Container text={path === "/"} style={{ minHeight: '100vh' }}>
+          <Sidebar.Pusher dimmed={visible} onClick={this.hideMenu} >
+            <Container style={{ minHeight: '100vh' }}>
               <Helmet title={`${title} - WISS 2019`}/>
               <Divider hidden />
-              <Button onClick={this.toggleMenu}>Show Menu</Button>
               <Divider />
               <div dangerouslySetInnerHTML={{__html: html}} />
               <Divider hidden />
