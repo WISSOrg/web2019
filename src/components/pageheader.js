@@ -24,21 +24,17 @@ export default class PageHeader extends Component {
             top: '0%',
             left: '0%',
             position: 'absolute',
-            justifyContent: 'center',
-            alignItems: 'center',
-            display: 'flex'
           }}>
-            <Container style={{ opacity: '0.8', textAlign: 'left' }}>
-              <Button floated='right' icon='bars' onClick={toggleMenu} style={{}} />
-              <span style={{
-                fontSize: '1.2em',
-                fontWeight: 'bold',
-                position: 'absolute',
-                top: '50%',
-                transform: 'translateY(-50%)'
+            <Container style={{ opacity: '0.8', height: '100%' }}>
+              <div style={{
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                display: 'flex',
+                height: '100%'
               }}>
-                WISS 2019
-              </span>
+                <div style={{ fontSize: '1.2em', fontWeight: 'bold' }}>WISS 2019</div>
+                <Button icon='bars' onClick={toggleMenu} />
+              </div>
             </Container>
           </div>
         </Segment>
