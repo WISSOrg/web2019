@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/WISS2019Travis`,
   siteMetadata: {
     title: `WISS 2019`,
     description: `WISS 2019.`,
@@ -23,8 +24,5 @@ module.exports = {
         path: `${__dirname}/src/markdowns`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
   ],
 }
