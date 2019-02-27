@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby';
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-import { Container, Divider, Segment, Sidebar } from 'semantic-ui-react';
+import { Container, Divider, Segment, Sidebar, Visibility } from 'semantic-ui-react';
 import Masthead from '../components/masthead';
 import PageFooter from '../components/pagefooter';
 import PageHeader from '../components/pageheader';
@@ -10,19 +10,29 @@ import '../styles/markdown.css';
 
 export default class Template extends Component {
   state = {
-    visible: false,
+    isSideMenuVisible: false,
+
+    mastheadVisibility: {
+      percentagePassed: 0,
+      topPassed: false,
+      bottomPassed: false,
+      topVisible: false,
+      bottomVisible: false,
+    },
   };
+
+  handleUpdate = (e, { calculations }) => this.setState({ mastheadVisibility: calculations });
 
   toggleMenu(event) {
     // This is necessary to stop the "onClick" event to be propagatted to the
     // parent DOM's "onClick" event
     event.stopPropagation();
 
-    this.setState({ visible: !this.state.visible });
+    this.setState({ isSideMenuVisible: !this.state.isSideMenuVisible });
   }
 
   hideMenu() {
-    this.setState({ visible: false });
+    this.setState({ isSideMenuVisible: false });
   }
 
   render() {
@@ -33,17 +43,24 @@ export default class Template extends Component {
     const { frontmatter, html } = post;
     const { title, path } = frontmatter;
 
-    const { visible } = this.state;
+    const { isSideMenuVisible, mastheadVisibility } = this.state;
+
+    const isTop = (path === "/");
+
+    const showMenu = isTop ? (mastheadVisibility.percentagePassed > 0.8 || mastheadVisibility.bottomPassed) : true;
 
     return (
       <div>
-        <PageHeader toggleMenu={this.toggleMenu} hideMenu={this.hideMenu} />
-        { path === "/" ? <Masthead hideMenu={this.hideMenu} /> : null }
+        <Helmet title={`${title} - WISS 2019`}/>
+        <Visibility onUpdate={this.handleUpdate}>
+          { isTop ? <Masthead hideMenu={this.hideMenu} /> : null }
+        </Visibility>
         <Sidebar.Pushable as={Segment} style={{ borderWidth: '0px', borderRadius: '0px', margin: '0px' }}>
-          <SideMenu animation={true} visible={visible} />
-          <Sidebar.Pusher dimmed={visible} onClick={this.hideMenu} >
+          <SideMenu animation={true} visible={isSideMenuVisible} />
+          <Sidebar.Pusher dimmed={isSideMenuVisible} onClick={this.hideMenu} >
+            <PageHeader toggleMenu={this.toggleMenu} hideMenu={this.hideMenu} visible={showMenu} />
+            { isTop ? null : <div style={{ height: '74px' }}></div> }
             <Container style={{ minHeight: '100vh' }}>
-              <Helmet title={`${title} - WISS 2019`}/>
               <Divider hidden />
               <Divider />
               <div dangerouslySetInnerHTML={{__html: html}} />
