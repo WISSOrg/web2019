@@ -44,7 +44,7 @@ export default class SideMenu extends Component {
           <Link to="/review_policy">査読方針</Link>
         </Menu.Item>
         <Menu.Item>
-          （TBA)
+          <Link to="/review_form">査読フォーム</Link>
         </Menu.Item>
         <Divider horizontal>
           <Header inverted as='h5'>プログラム</Header>
