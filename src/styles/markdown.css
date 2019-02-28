@@ -32,6 +32,20 @@ pre {
 code {
   font-family: unset;
 }
+
+table {
+  margin: 1em 0;
+}
+
+th {
+  background-color: rgba(0, 0, 0, 0.05);
+  font-weight: bold;
+}
+
+th, td {
+  padding: 0.6em;
+}
+
 .pushable:not(body) {
   transform: none;
 }
