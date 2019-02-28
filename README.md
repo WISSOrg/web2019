@@ -37,3 +37,21 @@ gulp
 ## Travis CI
 
 Whenever you push to the `master` branch, Travis CI process runs to build files and deploy (copy) them to the web server.
+
+## Contributing
+
+(TBA)
+
+Before participating in the development of this project, it would be useful to be familiar with the following frameworks and languages:
+
+- [GatsbyJS](https://www.gatsbyjs.org/)
+- [React](https://reactjs.org/)
+- [Semantic UI](https://semantic-ui.com/)
+- [JSX](http://facebook.github.io/jsx/)
+- [GraphQL](https://graphql.org/)
+- [GitHub Flavored Markdown](https://github.github.com/gfm/)
+
+## Maintainers
+
+- Jun Kato
+- Yuki Koyama
