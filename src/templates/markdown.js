@@ -5,6 +5,7 @@ import { Container, Divider, Segment, Sidebar, Visibility } from 'semantic-ui-re
 import Masthead from '../components/masthead';
 import PageFooter from '../components/pagefooter';
 import PageHeader from '../components/pageheader';
+import Seo from '../components/seo';
 import SideMenu from '../components/sidemenu';
 import '../styles/markdown.css';
 
@@ -51,7 +52,8 @@ export default class Template extends Component {
 
     return (
       <div>
-        <Helmet title={`${title} - WISS 2019`}/>
+        <Helmet title={`${title} - WISS 2019`} />
+        <Seo />
         <Visibility onUpdate={this.handleUpdate}>
           { isTop ? <Masthead hideMenu={this.hideMenu} /> : null }
         </Visibility>
