@@ -75,4 +75,4 @@ excerpt: "表紙デザイン募集"
 
 WISS2019 表紙デザインコンペ担当
 
-中村裕美（産総研） 2018design at wiss.org
+中村裕美（産総研） 2019design at wiss.org
