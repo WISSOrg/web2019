@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Divider, Header, Segment } from 'semantic-ui-react';
-import Wiss00 from '../images/wiss2018-0.png';
+import HeaderImage from '../images/wiss2018-0-compressed.jpg';
 import Gradient from './gradient';
 import Vignette from './vignette';
 
@@ -14,7 +14,7 @@ export default (props) => (
       width: '100%',
       height: '100%',
       zIndex: 0,
-      backgroundImage: `url(${Wiss00})`,
+      backgroundImage: `url(${HeaderImage})`,
       backgroundSize: 'cover',
       position: 'absolute',
       top: '50%',
