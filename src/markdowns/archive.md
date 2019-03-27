@@ -9,4 +9,4 @@ excerpt: "過去のWISS"
 
 WISS 2004からWISS 2018までの情報です。予稿集の表紙も掲載しています。
 
-（TBA）
+__掲載準備中です。[こちら](https://www.wiss.org/WISS2018/archive/)をご参照ください。__
