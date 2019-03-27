@@ -64,7 +64,6 @@ export default class Template extends Component {
             { isTop ? null : <div style={{ height: '74px' }}></div> }
             <Container style={{ minHeight: '100vh', paddingTop: '40px', paddingBottom: '40px' }}>
               <Divider hidden />
-              <Divider />
               <div dangerouslySetInnerHTML={{__html: html}} />
               <Divider hidden />
             </Container>
