@@ -54,9 +54,9 @@ excerpt: "表紙デザイン募集"
 - 応募時には上記2点に関してPDFファイルとともに、JPEG, PNGのいずれかのフォーマットのファイルをつけてください。
 - 採用決定後に、詳細なデザイン仕様をお伝えします。
 - 日本ソフトウェア学会のロゴは、 <http://www.jssst.or.jp/kitei/detail/logo_data.html> からダウンロードしてください。
-- 例年使用されているWISSのロゴベースは、[こちら (.ai)](./) __（準備中）__ からダウンロードの上、ソフトウェア学会のロゴと組み合わせてください。
+- 例年使用されているWISSのロゴベースは、[こちら (.ai)](/download/wiss_logo_template.ai) からダウンロードの上、ソフトウェア学会のロゴと組み合わせてください。
 - aiファイルソフトウェア学会ロゴ配置の参考として枠レイヤを用意しています。
-- 画像を元に作成される場合は <https://www.wiss.org/WISS2018/wp-content/uploads/wiss_logo_template_no_flame.png> をダウンロードの上ご活用ください。
+- 画像を元に作成される場合は[こちら（.png）](/download/wiss_logo_template_no_flame.png) をダウンロードの上ご活用ください。
 
 ## 注意事項
 
