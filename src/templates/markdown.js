@@ -66,7 +66,10 @@ export default class Template extends Component {
             { isTop ? null : <div style={{ height: '74px' }}></div> }
             <Container style={{ minHeight: '100vh', paddingTop: '40px', paddingBottom: '40px' }}>
               <Divider hidden />
+              {/* Render the content written in Markdown */}
               <div dangerouslySetInnerHTML={{__html: html}} />
+
+              {/* If the page is about committee members, append a custom component */}
               { isCommittee ? <ProgramCommitteeGrid /> : null }
               <Divider hidden />
             </Container>
