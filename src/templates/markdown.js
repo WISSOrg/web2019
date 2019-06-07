@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby';
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-import { Container, Divider, Segment, Sidebar, Visibility } from 'semantic-ui-react';
+import { Container, Segment, Sidebar, Visibility } from 'semantic-ui-react';
 import Masthead from '../components/masthead';
 import PageFooter from '../components/pagefooter';
 import PageHeader from '../components/pageheader';
