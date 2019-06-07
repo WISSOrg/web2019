@@ -1,10 +1,26 @@
 import React, { Component } from 'react';
-import { Container } from 'semantic-ui-react';
+import { Grid, Image } from 'semantic-ui-react';
 
 export default class ProgramCommitteeGrid extends Component {
   render() {
     return (
-      <p>Test message: this space will be used as by the program-committee grid component.</p>
+      <Grid style={{ marginTop: '20px' }}>
+        <Grid.Column width={4}>
+          <p>Test message: this space will be used as by a program-committee grid element.</p>
+        </Grid.Column>
+        <Grid.Column width={4}>
+          <p>Test message: this space will be used as by a program-committee grid element.</p>
+        </Grid.Column>
+        <Grid.Column width={4}>
+          <p>Test message: this space will be used as by a program-committee grid element.</p>
+        </Grid.Column>
+        <Grid.Column width={4}>
+          <p>Test message: this space will be used as by a program-committee grid element.</p>
+        </Grid.Column>
+        <Grid.Column width={4}>
+          <p>Test message: this space will be used as by a program-committee grid element.</p>
+        </Grid.Column>
+      </Grid>
     );
   }
 }
