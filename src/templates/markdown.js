@@ -8,6 +8,7 @@ import PageHeader from '../components/pageheader';
 import Seo from '../components/seo';
 import SideMenu from '../components/sidemenu';
 import '../styles/markdown.css';
+import ProgramCommitteeGrid from '../components/programcommitteegrid';
 
 export default class Template extends Component {
   state = {
@@ -47,6 +48,7 @@ export default class Template extends Component {
     const { isSideMenuVisible, mastheadVisibility } = this.state;
 
     const isTop = (path === "/");
+    const isCommittee = (path === "/committee");
 
     const showMenu = isTop ? (mastheadVisibility.percentagePassed > 0.8 || mastheadVisibility.bottomPassed) : true;
 
@@ -65,6 +67,7 @@ export default class Template extends Component {
             <Container style={{ minHeight: '100vh', paddingTop: '40px', paddingBottom: '40px' }}>
               <Divider hidden />
               <div dangerouslySetInnerHTML={{__html: html}} />
+              { isCommittee ? <ProgramCommitteeGrid /> : null }
               <Divider hidden />
             </Container>
             <PageFooter />
