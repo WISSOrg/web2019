@@ -5,6 +5,7 @@ class ProgramCommitteeGridCell extends Component {
   render() {
     return (
       <Grid.Column width={4}>
+        <Image src='/pc/placeholder.jpg' size='small' rounded centered />
         <p>Test message: this space will be used as by a program-committee grid element.</p>
       </Grid.Column>
     );
