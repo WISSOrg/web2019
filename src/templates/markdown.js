@@ -64,14 +64,12 @@ export default class Template extends Component {
           <Sidebar.Pusher dimmed={isSideMenuVisible} onClick={this.hideMenu} >
             <PageHeader toggleMenu={this.toggleMenu} hideMenu={this.hideMenu} visible={showMenu} />
             { isTop ? null : <div style={{ height: '74px' }}></div> }
-            <Container style={{ minHeight: '100vh', paddingTop: '40px', paddingBottom: '40px' }}>
-              <Divider hidden />
+            <Container style={{ minHeight: '100vh', paddingTop: '80px', paddingBottom: '80px' }}>
               {/* Render the content written in Markdown */}
               <div dangerouslySetInnerHTML={{__html: html}} />
 
               {/* If the page is about committee members, append a custom component */}
               { isCommittee ? <ProgramCommitteeGrid /> : null }
-              <Divider hidden />
             </Container>
             <PageFooter />
           </Sidebar.Pusher>
