@@ -12,11 +12,11 @@ class ChairsTableCell extends Component {
     const image_path = '/pc/' + image + ".jpg";
 
     return (
-      <Grid.Row>
-        <Grid.Column width={4}>
+      <Grid.Row centered>
+        <Grid.Column mobile={8} tablet={4} computer={4}>
           <Image src={ image_path } rounded centered />
         </Grid.Column>
-        <Grid.Column width={12}>
+        <Grid.Column mobile={12} tablet={12} computer={12} style={{ paddingTop: '1em', paddingBottom: '1em' }}>
           <p style={{ marginTop: '0em', marginBottom: '0.4em' }}><b>{ role }</b></p>
           <p style={{ marginTop: '0em', marginBottom: '0.4em' }}><b>{ name }</b></p>
           <p style={{ marginTop: '0em', marginBottom: '0.4em' }}><b>所属：</b>{ affiliation }</p>

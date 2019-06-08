@@ -12,7 +12,7 @@ export default class ProgramCommitteeGridCell extends Component {
     const image_path = '/pc/' + image + ".jpg";
 
     return (
-      <Grid.Column width={4} style={{ paddingBottom: '40px', textAlign: 'center' }}>
+      <Grid.Column mobile={8} tablet={4} computer={4} style={{ paddingBottom: '40px', textAlign: 'center' }}>
         <Image src={ image_path } size='small' rounded centered />
         <p style={{ marginTop: '1em', marginBottom: '1em' }}><b>{ name }</b></p>
         <p style={{ marginTop: '0em', marginBottom: '0.4em' }}><b>所属：</b>{ affiliation }</p>
@@ -28,4 +28,3 @@ export default class ProgramCommitteeGridCell extends Component {
     );
   }
 }
-
