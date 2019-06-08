@@ -8,8 +8,7 @@ import PageHeader from '../components/pageheader';
 import Seo from '../components/seo';
 import SideMenu from '../components/sidemenu';
 import '../styles/markdown.css';
-import ProgramCommitteeGrid from '../components/programcommitteegrid';
-import ChairsTable from '../components/chairstable';
+import CommitteeContent from '../components/committeecontent';
 
 export default class Template extends Component {
   state = {
@@ -66,18 +65,13 @@ export default class Template extends Component {
             <PageHeader toggleMenu={this.toggleMenu} hideMenu={this.hideMenu} visible={showMenu} />
             { isTop ? null : <div style={{ height: '74px' }}></div> }
             <Container style={{ minHeight: '100vh', paddingTop: '80px', paddingBottom: '80px' }}>
+              { isCommittee 
+                // If the page is about committee members, display a custom component
+                ? <CommitteeContent /> 
 
-              {/* If the page is about committee members, append a custom component */}
-              { isCommittee ? <h1>WISS委員一覧</h1> : null }
-              { isCommittee ? <h2>WISS 2019実行委員</h2> : null }
-              { isCommittee ? <ChairsTable /> : null }
-
-              {/* Render the content written in Markdown */}
-              <div dangerouslySetInnerHTML={{__html: html}} />
-
-              {/* If the page is about committee members, append a custom component */}
-              { isCommittee ? <ProgramCommitteeGrid /> : null }
-              
+                // Render the content written in Markdown
+                : <div dangerouslySetInnerHTML={{__html: html}} />
+              }
             </Container>
             <PageFooter />
           </Sidebar.Pusher>
