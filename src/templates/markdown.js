@@ -1,13 +1,14 @@
 import { graphql } from 'gatsby';
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-import { Container, Divider, Segment, Sidebar, Visibility } from 'semantic-ui-react';
+import { Container, Segment, Sidebar, Visibility } from 'semantic-ui-react';
 import Masthead from '../components/masthead';
 import PageFooter from '../components/pagefooter';
 import PageHeader from '../components/pageheader';
 import Seo from '../components/seo';
 import SideMenu from '../components/sidemenu';
 import '../styles/markdown.css';
+import CommitteeContent from '../components/committeecontent';
 
 export default class Template extends Component {
   state = {
@@ -47,6 +48,7 @@ export default class Template extends Component {
     const { isSideMenuVisible, mastheadVisibility } = this.state;
 
     const isTop = (path === "/");
+    const isCommittee = (path === "/committee");
 
     const showMenu = isTop ? (mastheadVisibility.percentagePassed > 0.8 || mastheadVisibility.bottomPassed) : true;
 
@@ -62,10 +64,14 @@ export default class Template extends Component {
           <Sidebar.Pusher dimmed={isSideMenuVisible} onClick={this.hideMenu} >
             <PageHeader toggleMenu={this.toggleMenu} hideMenu={this.hideMenu} visible={showMenu} />
             { isTop ? null : <div style={{ height: '74px' }}></div> }
-            <Container style={{ minHeight: '100vh', paddingTop: '40px', paddingBottom: '40px' }}>
-              <Divider hidden />
-              <div dangerouslySetInnerHTML={{__html: html}} />
-              <Divider hidden />
+            <Container style={{ minHeight: '100vh', paddingTop: '80px', paddingBottom: '80px' }}>
+              { isCommittee 
+                // If the page is about committee members, display a custom component
+                ? <CommitteeContent /> 
+
+                // Render the content written in Markdown
+                : <div dangerouslySetInnerHTML={{__html: html}} />
+              }
             </Container>
             <PageFooter />
           </Sidebar.Pusher>
