@@ -2,6 +2,9 @@ import { StaticQuery, graphql } from "gatsby"
 import React, { Component } from 'react';
 import { Grid, Icon, Image } from 'semantic-ui-react';
 
+// This is only a temporal solution; it should be solved by assetPrefix https://www.gatsbyjs.org/docs/asset-prefix/
+const path_prefix = '/WISS2019';
+
 class ChairsTableCell extends Component {
   render() {
     const { name, affiliation, link, twitter, expertise, image, role, message } = this.props;
@@ -9,7 +12,7 @@ class ChairsTableCell extends Component {
     const link_dom = (link === '') ? null : <a href={ link }><Icon circular inverted color='grey' name='external'></Icon></a>
     const twitter_url = 'https://twitter.com/' + twitter
     const twitter_dom = (twitter === '') ? null : <a href={ twitter_url }><Icon circular inverted color='grey' name='twitter'></Icon></a>;
-    const image_path = '/pc/' + image + ".jpg";
+    const image_path = path_prefix + '/pc/' + image + ".jpg";
 
     return (
       <Grid.Row centered>
