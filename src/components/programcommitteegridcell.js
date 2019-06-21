@@ -24,8 +24,8 @@ export default class ProgramCommitteeGridCell extends Component {
         {/* If the member has either twitter or personal web links (or both), display icons */}
         {
           (link_dom != null || twitter_dom != null)
-          ? <p style={{ marginTop: '0em', marginBottom: '0.4em' }}>{ link_dom }{ twitter_dom }</p> 
-          : null 
+          ? <p style={{ marginTop: '0em', marginBottom: '0.4em' }}>{ link_dom }{ twitter_dom }</p>
+          : null
         }
       </Grid.Column>
     );

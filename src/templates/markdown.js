@@ -9,6 +9,7 @@ import Seo from '../components/seo';
 import SideMenu from '../components/sidemenu';
 import '../styles/markdown.css';
 import CommitteeContent from '../components/committeecontent';
+import SponsorGrid from '../components/sponsorgrid';
 
 export default class Template extends Component {
   state = {
@@ -49,6 +50,7 @@ export default class Template extends Component {
 
     const isTop = (path === "/");
     const isCommittee = (path === "/committee");
+    const showSponsors = (path === "/") || (path === "/sponsorship");
 
     const showMenu = isTop ? (mastheadVisibility.percentagePassed > 0.8 || mastheadVisibility.bottomPassed) : true;
 
@@ -65,12 +67,16 @@ export default class Template extends Component {
             <PageHeader toggleMenu={this.toggleMenu} hideMenu={this.hideMenu} visible={showMenu} />
             { isTop ? null : <div style={{ height: '74px' }}></div> }
             <Container style={{ minHeight: '100vh', paddingTop: '80px', paddingBottom: '80px' }}>
-              { isCommittee 
+              { isCommittee
                 // If the page is about committee members, display a custom component
-                ? <CommitteeContent /> 
+                ? <CommitteeContent />
 
                 // Render the content written in Markdown
                 : <div dangerouslySetInnerHTML={{__html: html}} />
+              }
+              { showSponsors
+                ? <SponsorGrid />
+                : null
               }
             </Container>
             <PageFooter />
