@@ -2,9 +2,16 @@ import React, { Component } from 'react';
 import { Grid, Image } from 'semantic-ui-react';
 
 // Sponsor logos
+import Isid from '../images/sponsors/isid.png';
 
 // Sponsor definitions
-const sponsor_definitions = [];
+const sponsor_definitions = [
+  {
+    name: "株式会社電通国際情報サービス",
+    image: Isid,
+    link: "https://www.isid.co.jp/",
+  },
+];
 
 export default class SponsorGrid extends Component {
 
