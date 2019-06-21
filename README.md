@@ -55,3 +55,7 @@ Before participating in the development of this project, it would be useful to b
 
 - Jun Kato
 - Yuki Koyama
+
+## License
+
+The javascript and setting files are distributed under the MIT license. All rights are reserved regarding the contents, including texts, media contents, etc.
