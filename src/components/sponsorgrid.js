@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Grid, Image } from 'semantic-ui-react';
 
 // Sponsor logos
-import Isid from '../images/sponsors/isid.png';
 
 // Sponsor definitions
 const sponsor_definitions = [];
