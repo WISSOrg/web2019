@@ -70,12 +70,12 @@ yarn-error.log
 .yarn-integrity
 
 # Semantic UI
-semantic/dist/*
-semantic/gulpfile.js
-semantic/src/definitions
-semantic/src/semantic.less
-semantic/src/theme.less
-semantic/src/themes
-semantic/tasks
-!semantic/dist/semantic.min.css
-!semantic/dist/semantic.min.js
+# semantic/dist/*
+# semantic/gulpfile.js
+# semantic/src/definitions
+# semantic/src/semantic.less
+# semantic/src/theme.less
+# semantic/src/themes
+# semantic/tasks
+# !semantic/dist/semantic.min.css
+# !semantic/dist/semantic.min.js

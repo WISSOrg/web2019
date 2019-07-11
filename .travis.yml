@@ -18,11 +18,12 @@ install:
   - yarn global add gatsby-cli
 
 script:
-  - cd ./semantic; gulp clean; gulp build; cd ../
   - yarn install
   - yarn build
+
 addons:
   ssh_known_hosts: wiss.org
+
 before_deploy:
 - test $TRAVIS_TEST_RESULT = 0
 - openssl aes-256-cbc -K $encrypted_2c430460807a_key -iv $encrypted_2c430460807a_iv
