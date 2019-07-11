@@ -18,6 +18,7 @@ install:
   - yarn global add gatsby-cli
 
 script:
+  - cd ./semantic; gulp clean; gulp build; cd ../
   - yarn install
   - yarn build
 addons:
