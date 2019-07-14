@@ -36,6 +36,9 @@ export default class SideMenu extends Component {
           <Link to="/sponsorship">企業スポンサー募集</Link>
         </Menu.Item>
         <Menu.Item>
+          <Link to="/call-for-volunteers">学生ボランティア募集</Link>
+        </Menu.Item>
+        <Menu.Item>
           （TBA)
         </Menu.Item>
         <Divider horizontal>
