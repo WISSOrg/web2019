@@ -22,12 +22,15 @@ const sponsor_definitions = [
 export default class SponsorGrid extends Component {
 
   render() {
+    var max_height = '100px'
     var sponsor_cells = [];
     sponsor_definitions.forEach(function(def, index, array) {
       sponsor_cells.push(
         <Grid.Column style={{ textAlign: 'center' }}>
           <a href={ def["link"] }>
-            <Image src={ def["image"] } centered fluid />
+            <div style={{ width: '100%', height: max_height, verticalAlign: 'middle', display: 'table-cell' }}>
+              <Image src={ def["image"] } centered style={{ maxWidth: '100%', maxHeight: '100%' }} />
+            </div>
             <p>{ def["name"] }</p>
           </a>
         </Grid.Column>
@@ -35,7 +38,7 @@ export default class SponsorGrid extends Component {
     });
 
     return (
-      <Grid doubling columns={3}>
+      <Grid doubling columns={3} style={{ marginTop: '10px' }}>
         { sponsor_cells }
       </Grid>
     );
