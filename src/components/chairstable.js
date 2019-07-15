@@ -7,7 +7,7 @@ const path_prefix = '/WISS2019';
 
 class ChairsTableCell extends Component {
   render() {
-    const { name, affiliation, link, twitter, expertise, image, role, message } = this.props;
+    const { name, affiliation, link, twitter, expertise, image, role } = this.props;
 
     const link_dom = (link === '') ? null : <a href={ link }><Icon circular inverted color='grey' name='external'></Icon></a>
     const twitter_url = 'https://twitter.com/' + twitter
@@ -28,8 +28,8 @@ class ChairsTableCell extends Component {
           {/* If the member has either twitter or personal web links (or both), display icons */}
           {
             (link_dom != null || twitter_dom != null)
-            ? <p style={{ marginTop: '0em', marginBottom: '0.4em' }}>{ link_dom }{ twitter_dom }</p> 
-            : null 
+            ? <p style={{ marginTop: '0em', marginBottom: '0.4em' }}>{ link_dom }{ twitter_dom }</p>
+            : null
           }
         </Grid.Column>
       </Grid.Row>
@@ -63,7 +63,7 @@ export default class ChairsTable extends Component {
   render() {
     return (
       // StaticQuery is a graphql functionality for non-page component
-      <StaticQuery 
+      <StaticQuery
         query={graphql`
         query {
           allChairsCsv {
