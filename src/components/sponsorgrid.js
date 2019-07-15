@@ -3,9 +3,15 @@ import { Grid, Image } from 'semantic-ui-react';
 
 // Sponsor logos
 import Isid from '../images/sponsors/isid.png';
+import Dentsu from '../images/sponsors/dentsu.png';
 
 // Sponsor definitions
 const sponsor_definitions = [
+  {
+    name: "株式会社電通",
+    image: Dentsu,
+    link: "http://www.dentsu.co.jp/",
+  },
   {
     name: "株式会社電通国際情報サービス",
     image: Isid,
