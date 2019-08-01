@@ -87,6 +87,9 @@ export default class SideMenu extends Component {
           ローカル情報（準備中）
         </Menu.Item>
         <Menu.Item>
+          表彰（準備中）
+        </Menu.Item>
+        <Menu.Item>
           <Link to="/committee">WISS委員一覧</Link>
         </Menu.Item>
         <Menu.Item>
