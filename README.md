@@ -6,8 +6,9 @@ Warning: This repository may contain information that is not officially confirme
 
 ## Prerequisites
 
-- gatsby-cli
+- node@10
 - yarn
+- gatsby-cli
 
 ## Clone & Install
 
@@ -37,6 +38,14 @@ gulp
 ## Travis CI
 
 Whenever you push to the `master` branch, Travis CI process runs to build files and deploy (copy) them to the web server.
+
+## Tips for macOS
+
+If you want to install node@10 (not node@11) via Homebrew, follow this:
+```
+brew install node@10
+echo 'export PATH="/usr/local/opt/node@10/bin:$PATH"' >> ~/.bash_profile
+```
 
 ## Contributing
 
