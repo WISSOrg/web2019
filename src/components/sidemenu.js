@@ -38,9 +38,6 @@ export default class SideMenu extends Component {
         <Menu.Item>
           <Link to="/call-for-volunteers">学生ボランティア募集</Link>
         </Menu.Item>
-        <Menu.Item>
-          （TBA)
-        </Menu.Item>
         <Divider horizontal>
           <Header inverted as='h5'>著者の方へ</Header>
         </Divider>
@@ -57,31 +54,43 @@ export default class SideMenu extends Component {
           <Header inverted as='h5'>プログラム</Header>
         </Divider>
         <Menu.Item>
-          （TBA)
+          全体スケジュール・登壇発表・ロングティザー発表（準備中）
+        </Menu.Item>
+        <Menu.Item>
+          デモ・ポスター発表（準備中）
         </Menu.Item>
         <Divider horizontal>
           <Header inverted as='h5'>動画中継</Header>
         </Divider>
         <Menu.Item>
-          （TBA)
+          １日目（準備中）
+        </Menu.Item>
+        <Menu.Item>
+          ２日目（準備中）
+        </Menu.Item>
+        <Menu.Item>
+          ３日目（準備中）
         </Menu.Item>
         <Divider horizontal>
           <Header inverted as='h5'>予稿集</Header>
         </Divider>
         <Menu.Item>
-          （TBA)
+          ウェブ予稿集（準備中）
         </Menu.Item>
         <Divider horizontal>
           <Header inverted as='h5'>WISSについて</Header>
         </Divider>
         <Menu.Item>
+          名札システム（準備中）
+        </Menu.Item>
+        <Menu.Item>
+          ローカル情報（準備中）
+        </Menu.Item>
+        <Menu.Item>
           <Link to="/committee">WISS委員一覧</Link>
         </Menu.Item>
         <Menu.Item>
           <Link to="/archive">過去のWISS</Link>
-        </Menu.Item>
-        <Menu.Item>
-          （TBA)
         </Menu.Item>
       </Sidebar>
     );
