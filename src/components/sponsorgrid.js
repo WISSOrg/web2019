@@ -5,6 +5,7 @@ import { Grid, Image } from 'semantic-ui-react';
 import Isid from '../images/sponsors/isid.png';
 import Dentsu from '../images/sponsors/dentsu.png';
 import Bnr from '../images/sponsors/bnr.jpg';
+import TeamLab from '../images/sponsors/teamlab.png';
 import Future from '../images/sponsors/future.png';
 
 // Sponsor definitions
@@ -23,6 +24,11 @@ const sponsor_definitions = [
     name: "株式会社バンダイナムコ研究所",
     image: Bnr,
     link: "https://www.bandainamco-mirai.com/",
+  },
+  {
+    name: "チームラボ株式会社",
+    image: TeamLab,
+    link: "https://www.team-lab.com/",
   },
   {
     name: "フューチャー株式会社",
