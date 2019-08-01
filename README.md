@@ -67,4 +67,4 @@ Before participating in the development of this project, it would be useful to b
 
 ## License
 
-The javascript and setting files are distributed under the MIT license. All rights are reserved regarding the contents, including texts, media contents, etc.
+The javascript and setting files are distributed under the MIT license. All rights are reserved regarding the other contents, including texts, media contents, etc.
