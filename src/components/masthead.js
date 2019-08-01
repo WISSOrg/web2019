@@ -7,7 +7,7 @@ import Vignette from './vignette';
 export default (props) => (
   <Segment inverted textAlign='center' vertical onClick={props.hideMenu} style={{
     overflow: 'hidden',
-    height: '100vh',
+    height: '560px',
     width: '100%'
   }}>
     <div style={{

@@ -3,7 +3,7 @@ import { Container, Segment } from 'semantic-ui-react';
 import Gradient from './gradient'
 
 export default () => (
-  <Segment inverted vertical style={{ padding: '120px 0px' }} textAlign='center'>
+  <Segment inverted vertical style={{ padding: '160px 0px' }} textAlign='center'>
     <Gradient zIndex={0} />
     <div style={{
       width: '100%',
