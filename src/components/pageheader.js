@@ -27,7 +27,7 @@ export default class PageHeader extends Component {
             left: '0%',
             position: 'absolute',
           }}>
-            <Container style={{ opacity: '0.8', height: '100%' }}>
+            <Container style={{ opacity: '0.8', height: '100%', filter: 'drop-shadow(0px 4px 10px rgba(56, 61, 75, 0.5)' }}>
               <div style={{
                 justifyContent: 'space-between',
                 alignItems: 'center',
