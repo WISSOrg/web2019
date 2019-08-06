@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Divider, Header, Segment } from 'semantic-ui-react';
+import { Container, Divider, Image, Segment } from 'semantic-ui-react';
 import HeaderImage from '../images/wiss2018-0-compressed.jpg';
+import MainLogo from '../images/logo/logo.png';
 import Gradient from './gradient';
 import Vignette from './vignette';
 
@@ -41,11 +42,10 @@ export default (props) => (
       display: 'flex'
     }}>
       <Container text style={{ opacity: 0.8 }}>
+        <Image centered src={MainLogo} style={{ width: '100%', maxWidth: '600px' }} alt="WISS 2019" />
         <Divider style={{ borderBottomWidth: '3px' }} />
-        <Header style={{ fontSize: '5em' }} as='h1' inverted>WISS 2019</Header>
-        <p>第27回インタラクティブシステムとソフトウェアに関するワークショップ</p>
-        <p>The 27th Workshop on Interactive Systems and Software</p>
-        <Divider style={{ borderBottomWidth: '3px' }} />
+        <p style={{ fontSize: '0.9em', margin: '0px' }}>第27回インタラクティブシステムとソフトウェアに関するワークショップ</p>
+        <p style={{ fontSize: '0.9em', marginBottom: '32px' }}>The 27th Workshop on Interactive Systems and Software</p>
       </Container>
     </div>
   </Segment>
