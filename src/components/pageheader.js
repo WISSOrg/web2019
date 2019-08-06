@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button, Container, Image, Segment, Transition } from 'semantic-ui-react';
-import { Link } from "gatsby"
 import Gradient from './gradient';
 import TitleLogo from '../images/logo/logo-with-title.png';
 
