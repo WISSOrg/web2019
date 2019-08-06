@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Button, Container, Segment, Transition } from 'semantic-ui-react';
+import { Button, Container, Image, Segment, Transition } from 'semantic-ui-react';
+import { Link } from "gatsby"
 import Gradient from './gradient';
+import TitleLogo from '../images/logo/logo-with-title.png';
 
 export default class PageHeader extends Component {
   render() {
@@ -32,7 +34,7 @@ export default class PageHeader extends Component {
                 display: 'flex',
                 height: '100%'
               }}>
-                <div style={{ fontSize: '1.2em', fontWeight: 'bold' }}>WISS 2019</div>
+                <Link to="/" style={{ height: '100%' }} ><Image src={TitleLogo} style={{ height: '100%' }} /></Link>
                 <Button icon='bars' onClick={toggleMenu} />
               </div>
             </Container>
