@@ -51,12 +51,12 @@ echo 'export PATH="/usr/local/opt/node@10/bin:$PATH"' >> ~/.bash_profile
 
 This year, the committee released call-for-designs for the proceedings and also the web. As the result, one design was officially selected. This design has the following color palette:
 
-- <span style="color: #59718E; background: rgba(27,31,35,.05);">&nbsp;&hearts;&nbsp;</span>: `#59718E` (background)
-- <span style="color: #FFFFFF; background: rgba(27,31,35,.05);">&nbsp;&hearts;&nbsp;</span>: `#FFFFFF` (borders and fonts)
-- <span style="color: #3E5B33; background: rgba(27,31,35,.05);">&nbsp;&hearts;&nbsp;</span>: `#3E5B33`
-- <span style="color: #D2C14D; background: rgba(27,31,35,.05);">&nbsp;&hearts;&nbsp;</span>: `#D2C14D`
-- <span style="color: #6C8760; background: rgba(27,31,35,.05);">&nbsp;&hearts;&nbsp;</span>: `#6C8760`
-- <span style="color: #383D4B; background: rgba(27,31,35,.05);">&nbsp;&hearts;&nbsp;</span>: `#383D4B`
+- <img height=30 src="https://via.placeholder.com/180x60/59718E/FFFFFF?text=59718E" /> : `#59718E` = `rgba(89, 113, 142, 1.0)` (background)
+- <img height=30 src="https://via.placeholder.com/180x60/FFFFFF/000000?text=FFFFFF" /> : `#FFFFFF` = `rgba(255, 255, 255, 1.0)` (borders and fonts)
+- <img height=30 src="https://via.placeholder.com/180x60/3E5B33/FFFFFF?text=3E5B33" /> : `#3E5B33` = `rgba(62, 91, 51, 1.0)`
+- <img height=30 src="https://via.placeholder.com/180x60/D2C14D/FFFFFF?text=D2C14D" /> : `#D2C14D` = `rgba(210, 193, 77, 1.0)`
+- <img height=30 src="https://via.placeholder.com/180x60/6C8760/FFFFFF?text=6C8760" /> : `#6C8760` = `rgba(108, 135, 96, 1.0)`
+- <img height=30 src="https://via.placeholder.com/180x60/383D4B/FFFFFF?text=383D4B" /> : `#383D4B` = `rgba(56, 61, 75, 1.0)`
 
 and uses `Ten Mincho Regular` for both Japanese and English characters.
 
