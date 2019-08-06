@@ -47,6 +47,19 @@ brew install node@10
 echo 'export PATH="/usr/local/opt/node@10/bin:$PATH"' >> ~/.bash_profile
 ```
 
+## Design Competition
+
+This year, the committee released call-for-designs for the proceedings and also the web. As the result, one design was officially selected. This design has the following color palette:
+
+- <span style="color: #59718E; background: rgba(27,31,35,.05);">&nbsp;&hearts;&nbsp;</span>: `#59718E` (background)
+- <span style="color: #FFFFFF; background: rgba(27,31,35,.05);">&nbsp;&hearts;&nbsp;</span>: `#FFFFFF` (borders and fonts)
+- <span style="color: #3E5B33; background: rgba(27,31,35,.05);">&nbsp;&hearts;&nbsp;</span>: `#3E5B33`
+- <span style="color: #D2C14D; background: rgba(27,31,35,.05);">&nbsp;&hearts;&nbsp;</span>: `#D2C14D`
+- <span style="color: #6C8760; background: rgba(27,31,35,.05);">&nbsp;&hearts;&nbsp;</span>: `#6C8760`
+- <span style="color: #383D4B; background: rgba(27,31,35,.05);">&nbsp;&hearts;&nbsp;</span>: `#383D4B`
+
+and uses `Ten Mincho Regular` for both Japanese and English characters.
+
 ## Contributing
 
 (TBA)
