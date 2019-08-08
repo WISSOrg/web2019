@@ -70,7 +70,7 @@ export default class Template extends Component {
             <PageHeaderBg hideMenu={this.hideMenu} visible={showMenu} />
             <PageHeaderButton toggleMenu={this.toggleMenu} hideMenu={this.hideMenu} visible={showMenu} />
             { isTop ? null : <div style={{ height: '74px' }}></div> }
-            <Container style={{ minHeight: '100vh', paddingTop: '80px', paddingBottom: '80px' }}>
+            <Container style={{ minHeight: '100vh', paddingTop: '40px', paddingBottom: '80px' }}>
               { isTop ? <Info /> : null }
               { isCommittee
                 // If the page is about committee members, display a custom component
