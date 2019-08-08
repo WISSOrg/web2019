@@ -2,13 +2,16 @@ import { graphql } from 'gatsby';
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { Container, Segment, Sidebar, Visibility } from 'semantic-ui-react';
+// CSS
+import '../styles/markdown.css';
+// Custom components
+import CommitteeContent from '../components/committeecontent';
+import Info from '../components/info';
 import Masthead from '../components/masthead';
 import PageFooter from '../components/pagefooter';
 import { PageHeaderBg, PageHeaderButton } from '../components/pageheader';
 import Seo from '../components/seo';
 import SideMenu from '../components/sidemenu';
-import '../styles/markdown.css';
-import CommitteeContent from '../components/committeecontent';
 import SponsorGrid from '../components/sponsorgrid';
 
 export default class Template extends Component {
@@ -68,6 +71,7 @@ export default class Template extends Component {
             <PageHeaderButton toggleMenu={this.toggleMenu} hideMenu={this.hideMenu} visible={showMenu} />
             { isTop ? null : <div style={{ height: '74px' }}></div> }
             <Container style={{ minHeight: '100vh', paddingTop: '80px', paddingBottom: '80px' }}>
+              { isTop ? <Info /> : null }
               { isCommittee
                 // If the page is about committee members, display a custom component
                 ? <CommitteeContent />
