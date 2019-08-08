@@ -44,7 +44,7 @@ export default class SponsorGrid extends Component {
     var sponsor_cells = [];
     sponsor_definitions.forEach(function(def, index, array) {
       sponsor_cells.push(
-        <Grid.Column style={{ textAlign: 'center' }}>
+        <Grid.Column key={ index } style={{ textAlign: 'center' }}>
           <a href={ def["link"] }>
             <div style={{ width: '100%', height: max_height, verticalAlign: 'middle', display: 'table-cell' }}>
               <Image src={ def["image"] } centered style={{ maxWidth: '100%', maxHeight: '100%' }} />

@@ -2,13 +2,16 @@ import { graphql } from 'gatsby';
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { Container, Segment, Sidebar, Visibility } from 'semantic-ui-react';
+// CSS
+import '../styles/markdown.css';
+// Custom components
+import CommitteeContent from '../components/committeecontent';
+import Info from '../components/info';
 import Masthead from '../components/masthead';
 import PageFooter from '../components/pagefooter';
-import PageHeader from '../components/pageheader';
+import { PageHeaderBg, PageHeaderButton } from '../components/pageheader';
 import Seo from '../components/seo';
 import SideMenu from '../components/sidemenu';
-import '../styles/markdown.css';
-import CommitteeContent from '../components/committeecontent';
 import SponsorGrid from '../components/sponsorgrid';
 
 export default class Template extends Component {
@@ -58,15 +61,17 @@ export default class Template extends Component {
       <div>
         <Helmet title={`${title} - WISS 2019`} />
         <Seo />
-        <Visibility onUpdate={this.handleUpdate}>
-          { isTop ? <Masthead hideMenu={this.hideMenu} /> : null }
-        </Visibility>
         <Sidebar.Pushable as={Segment} style={{ borderWidth: '0px', borderRadius: '0px', margin: '0px' }}>
           <SideMenu animation={true} visible={isSideMenuVisible} />
           <Sidebar.Pusher dimmed={isSideMenuVisible} onClick={this.hideMenu} >
-            <PageHeader toggleMenu={this.toggleMenu} hideMenu={this.hideMenu} visible={showMenu} />
+            <Visibility onUpdate={this.handleUpdate}>
+              { isTop ? <Masthead hideMenu={this.hideMenu} /> : null }
+            </Visibility>
+            <PageHeaderBg hideMenu={this.hideMenu} visible={showMenu} />
+            <PageHeaderButton toggleMenu={this.toggleMenu} hideMenu={this.hideMenu} visible={showMenu} />
             { isTop ? null : <div style={{ height: '74px' }}></div> }
-            <Container style={{ minHeight: '100vh', paddingTop: '80px', paddingBottom: '80px' }}>
+            <Container style={{ minHeight: '100vh', paddingTop: '40px', paddingBottom: '80px' }}>
+              { isTop ? <Info /> : null }
               { isCommittee
                 // If the page is about committee members, display a custom component
                 ? <CommitteeContent />

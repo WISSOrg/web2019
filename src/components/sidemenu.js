@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from "gatsby"
 import { Divider, Header, Menu, Sidebar } from 'semantic-ui-react'
-import WissIcon from '../images/cropped-wiss_black.png'
+import MainLogo from '../images/logo/logo.png'
 
 export default class SideMenu extends Component {
   render() {
@@ -18,7 +18,7 @@ export default class SideMenu extends Component {
         style={{ zIndex: '20' }}
       >
         <Menu.Item>
-          <Link to="/"><img src={WissIcon} style={{ width: '100%' }} alt='WISS' /></Link>
+          <Link to="/"><img src={MainLogo} style={{ width: '100%' }} alt='WISS' /></Link>
         </Menu.Item>
         <Divider horizontal>
           <Header inverted as='h5'>参加募集</Header>
@@ -80,6 +80,9 @@ export default class SideMenu extends Component {
         <Divider horizontal>
           <Header inverted as='h5'>WISSについて</Header>
         </Divider>
+        <Menu.Item>
+          <a href="https://twitter.com/wiss_official">公式ツイッター</a>
+        </Menu.Item>
         <Menu.Item>
           名札システム（準備中）
         </Menu.Item>
