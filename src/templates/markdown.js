@@ -61,14 +61,14 @@ export default class Template extends Component {
       <div>
         <Helmet title={`${title} - WISS 2019`} />
         <Seo />
-        <PageHeaderBg hideMenu={this.hideMenu} visible={showMenu} />
-        <PageHeaderButton toggleMenu={this.toggleMenu} hideMenu={this.hideMenu} visible={showMenu} />
         <Sidebar.Pushable as={Segment} style={{ borderWidth: '0px', borderRadius: '0px', margin: '0px' }}>
           <SideMenu animation={true} visible={isSideMenuVisible} />
           <Sidebar.Pusher dimmed={isSideMenuVisible} onClick={this.hideMenu} >
             <Visibility onUpdate={this.handleUpdate}>
               { isTop ? <Masthead hideMenu={this.hideMenu} /> : null }
             </Visibility>
+            <PageHeaderBg hideMenu={this.hideMenu} visible={showMenu} />
+            <PageHeaderButton toggleMenu={this.toggleMenu} hideMenu={this.hideMenu} visible={showMenu} />
             { isTop ? null : <div style={{ height: '74px' }}></div> }
             <Container style={{ minHeight: '100vh', paddingTop: '40px', paddingBottom: '80px' }}>
               { isTop ? <Info /> : null }
