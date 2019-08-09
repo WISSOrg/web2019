@@ -78,9 +78,9 @@ and uses `Ten Mincho Regular` for both Japanese and English characters.
 
 ## Contributing
 
-(TBA)
+If you want to improve the web design or fix minor issues, we welcome your PRs. If you want to request us to make some changes, we appreciate if you open Issues rather than directly contacting us.
 
-Before participating in the development of this project, it would be useful to be familiar with the following frameworks and languages:
+To participate in the full development of this project, it would be useful to be familiar with the following frameworks and languages:
 
 - [GatsbyJS](https://www.gatsbyjs.org/)
 - [React](https://reactjs.org/)
