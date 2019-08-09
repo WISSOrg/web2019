@@ -4,6 +4,7 @@ import Gradient from './gradient';
 import TitleLogo from '../images/logo/logo-with-title.png';
 
 const height = '72px'
+const dropshadow_style = { filter: 'drop-shadow(0px 4px 10px rgba(56, 61, 75, 0.5)' };
 
 export class PageHeaderBg extends Component {
   render() {
@@ -27,7 +28,7 @@ export class PageHeaderBg extends Component {
             left: '0%',
             position: 'absolute',
           }}>
-            <Container style={{ opacity: '0.9', height: '100%', filter: 'drop-shadow(0px 4px 10px rgba(56, 61, 75, 0.5)' }}>
+            <Container style={ Object.assign({ opacity: '0.9', height: '100%' }, dropshadow_style) }>
               <Image src={TitleLogo} style={{ height: '100%' }} />
             </Container>
           </div>
@@ -50,7 +51,7 @@ export class PageHeaderButton extends Component {
         zIndex: '13',
         borderBottomWidth: '0px',
       }}>
-        <Container textAlign='right' style={{ transition: 'opacity 0.5s ease', opacity: visible ? 0.9 : 0.5, height: '100%', filter: 'drop-shadow(0px 4px 10px rgba(56, 61, 75, 0.5)' }}>
+        <Container textAlign='right' style={ Object.assign({ transition: 'opacity 0.5s ease', opacity: visible ? 0.9 : 0.5, height: '100%' }, dropshadow_style) }>
           <Button icon='bars' onClick={toggleMenu} />
         </Container>
       </Segment>
