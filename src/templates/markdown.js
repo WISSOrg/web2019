@@ -10,6 +10,7 @@ import Info from '../components/info';
 import Masthead from '../components/masthead';
 import PageFooter from '../components/pagefooter';
 import { PageHeaderBg, PageHeaderButton } from '../components/pageheader';
+import Program from '../components/program';
 import Seo from '../components/seo';
 import SideMenu from '../components/sidemenu';
 import SponsorGrid from '../components/sponsorgrid';
@@ -53,9 +54,23 @@ export default class Template extends Component {
 
     const isTop = (path === "/");
     const isCommittee = (path === "/committee");
+    const isProgram = (path === "/program");
     const showSponsors = (path === "/") || (path === "/sponsorship");
 
     const showMenu = isTop ? (mastheadVisibility.percentagePassed > 0.8 || mastheadVisibility.bottomPassed) : true;
+
+    const mainContent = (() => {
+      if (isCommittee) {
+        // If the page is about committee members, display a custom component
+        return (<CommitteeContent />);
+      } else if (isProgram) {
+        // If the page is about the main program, display a custom component
+        return (<Program />);
+      } else {
+        // Render the content written in Markdown
+        return (<div dangerouslySetInnerHTML={{__html: html}} />);
+      }
+    })();
 
     return (
       <div>
@@ -72,13 +87,7 @@ export default class Template extends Component {
             { isTop ? null : <div style={{ height: '74px' }}></div> }
             <Container style={{ minHeight: '100vh', paddingTop: '40px', paddingBottom: '80px' }}>
               { isTop ? <Info /> : null }
-              { isCommittee
-                // If the page is about committee members, display a custom component
-                ? <CommitteeContent />
-
-                // Render the content written in Markdown
-                : <div dangerouslySetInnerHTML={{__html: html}} />
-              }
+              { mainContent }
               { showSponsors
                 ? <SponsorGrid />
                 : null
