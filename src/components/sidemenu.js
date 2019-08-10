@@ -18,7 +18,7 @@ const contents = {
     <Link to="/review_form">査読フォーム</Link>,
   ],
   "プログラム": [
-    <span>全体スケジュール・登壇発表・ロングティザー発表（準備中）</span>,
+    <Link to="/program">全体スケジュール・登壇発表・ロングティザー発表</Link>,
     <span>デモ・ポスター発表（準備中）</span>,
   ],
   "動画中継": [
