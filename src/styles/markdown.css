@@ -47,11 +47,11 @@ th, td {
 }
 
 .pushable:not(body) {
-  transform: none;
+  transform: none !important;
 }
 
 .pushable:not(body) > .ui.sidebar,
 .pushable:not(body) > .fixed,
 .pushable:not(body) > .pusher:after {
-  position: fixed;
+  position: fixed !important;
 }

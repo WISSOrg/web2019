@@ -81,6 +81,9 @@ export default class SideMenu extends Component {
           <Header inverted as='h5'>WISSについて</Header>
         </Divider>
         <Menu.Item>
+          <a href="https://twitter.com/wiss_official">公式ツイッター</a>
+        </Menu.Item>
+        <Menu.Item>
           名札システム（準備中）
         </Menu.Item>
         <Menu.Item>

@@ -14,7 +14,7 @@ __Warning: This repository may contain information that is not officially confir
 
 ## Clone & Install
 
-```
+```bash
 git clone https://github.com/WISSOrg/web2019.git
 cd web2019
 yarn install
@@ -22,17 +22,17 @@ yarn install
 
 ## Develop & Build
 
-```
+```bash
 yarn start
 ```
 
-```
+```bash
 yarn build
 ```
 
 ## Rebuild Semantic UI
 
-```
+```bash
 cd semantic
 gulp
 ```
@@ -41,13 +41,27 @@ gulp
 
 Whenever you push to the `master` branch, Travis CI process runs to build files and deploy (copy) them to the web server.
 
-## Tips for macOS
+## Tips on Development
+
+### node@10 in macOS
 
 If you want to install node@10 (not node@11) via Homebrew, follow this:
-```
+```bash
 brew install node@10
 echo 'export PATH="/usr/local/opt/node@10/bin:$PATH"' >> ~/.bash_profile
 ```
+
+### Cache clear
+
+Not only
+```bash
+rm -r public
+```
+but also
+```bash
+rm -r .cache
+```
+is necessary.
 
 ## Design Competition
 
@@ -64,9 +78,9 @@ and uses `Ten Mincho Regular` for both Japanese and English characters.
 
 ## Contributing
 
-(TBA)
+If you want to improve the web design or fix minor issues, we welcome your PRs. If you want to request us to make some changes, we appreciate if you open Issues rather than directly contacting us.
 
-Before participating in the development of this project, it would be useful to be familiar with the following frameworks and languages:
+To participate in the full development of this project, it would be useful to be familiar with the following frameworks and languages:
 
 - [GatsbyJS](https://www.gatsbyjs.org/)
 - [React](https://reactjs.org/)
