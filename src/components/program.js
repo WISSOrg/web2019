@@ -20,6 +20,14 @@ const colormap = {
   "d": "rgba(210, 193, 77, 0.3)",
 }
 
+class Schedule extends Component {
+  render() {
+    return (
+      <div>Hello World!</div>
+    );
+  }
+}
+
 class TypeLabel extends Component {
   render() {
     const type = this.props.type;
@@ -146,7 +154,14 @@ class ProgramImpl extends Component {
       return array;
     })();
 
-    return <div><Header as="h1">登壇発表・ロングティザー発表</Header>{ session_cells }</div>
+    return (
+      <div>
+        <Header as="h1">全体スケジュール</Header>
+        <Schedule />
+        <Header as="h1">登壇発表・ロングティザー発表</Header>
+        { session_cells }
+      </div>
+    );
   }
 }
 
