@@ -1,6 +1,6 @@
 import { StaticQuery, graphql } from "gatsby"
 import React, { Component } from 'react';
-import { Divider, Grid, Header, Image, Label, List, Segment, Table } from 'semantic-ui-react';
+import { Divider, Grid, Header, Icon, Image, Label, List, Segment, Table } from 'semantic-ui-react';
 
 const session_info = {
   "1": { name: "Elephant Eggs", time: "1日目 15:40—16:50", session_chair: "（TBA）", chat_chair: "（TBA）" },
@@ -22,33 +22,42 @@ const colormap = {
 
 const schedule_info = {
   "1": [
-    { time: "13:00", type: "", name: "オープニング" },
-    { time: "13:30", type: "", name: "デモ中継" },
-    { time: "14:00", type: "", name: "デモ・ポスターセッション1" },
-    { time: "15:40", type: "", name: "セッション1: " + session_info["1"]["name"] },
-    { time: "16:50", type: "", name: "休憩" },
+    { time: "13:00", type: "info", name: "オープニング" },
+    { time: "13:30", type: "live", name: "デモ中継" },
+    { time: "14:00", type: "demo", name: "デモ・ポスターセッション1" },
+    { time: "15:40", type: "talk", name: "セッション1: " + session_info["1"]["name"] },
+    { time: "16:50", type: "rest", name: "休憩" },
     { time: "17:05", type: "", name: "（調整中）" },
     { time: "18:05", type: "", name: "セッション終了" },
     { time: "18:30", type: "food", name: "夕食" },
     { time: "??:??", type: "", name: "（TBA）" },
   ],
   "2": [
-    { time: "09:00", type: "", name: "セッション2: " + session_info["2"]["name"] },
-    { time: "10:15", type: "", name: "休憩" },
-    { time: "10:30", type: "", name: session_info["5"]["name"] },
+    { time: "09:00", type: "talk", name: "セッション2: " + session_info["2"]["name"] },
+    { time: "10:15", type: "rest", name: "休憩" },
+    { time: "10:30", type: "talk", name: session_info["5"]["name"] },
     { time: "11:45", type: "food", name: "昼食" },
-    { time: "13:00", type: "", name: "デモ中継" },
-    { time: "13:30", type: "", name: "デモ・ポスターセッション2" },
-    { time: "15:10", type: "", name: "セッション3: " + session_info["3"]["name"] },
-    { time: "16:15", type: "", name: "休憩" },
-    { time: "16:30", type: "", name: "セッション4: " + session_info["4"]["name"] },
-    { time: "17:50", type: "", name: "休憩" },
+    { time: "13:00", type: "live", name: "デモ中継" },
+    { time: "13:30", type: "demo", name: "デモ・ポスターセッション2" },
+    { time: "15:10", type: "talk", name: "セッション3: " + session_info["3"]["name"] },
+    { time: "16:15", type: "rest", name: "休憩" },
+    { time: "16:30", type: "talk", name: "セッション4: " + session_info["4"]["name"] },
+    { time: "17:50", type: "rest", name: "休憩" },
     { time: "??:??", type: "", name: "（TBA）" },
   ],
   "3": [
     { time: "??:??", type: "", name: "（TBA）" },
   ],
 };
+
+const icon_map = {
+  "talk": "talk",
+  "demo": "users",
+  "live": "record",
+  "food": "utensils",
+  "rest": "coffee",
+  "info": "info",
+}
 
 class OneDaySchedule extends Component {
   render() {
@@ -58,8 +67,11 @@ class OneDaySchedule extends Component {
       var array = [];
 
       schedule_info[day].forEach(function(elem) {
+        const icon = <Icon circular inverted name={ icon_map[elem["type"]] } />
+
         array.push(
           <Table.Row key={ day + "_" + elem["time"] } >
+            <Table.Cell>{ icon }</Table.Cell>
             <Table.Cell>{ elem["time"] }</Table.Cell>
             <Table.Cell>{ elem["name"] }</Table.Cell>
           </Table.Row>
@@ -71,12 +83,6 @@ class OneDaySchedule extends Component {
 
     return (
       <Table>
-        <Table.Header>
-          <Table.Row>
-            <Table.HeaderCell>時刻</Table.HeaderCell>
-            <Table.HeaderCell>内容</Table.HeaderCell>
-          </Table.Row>
-        </Table.Header>
         <Table.Body>
           { rows }
         </Table.Body>
@@ -92,14 +98,23 @@ class Schedule extends Component {
 
       for (var key in schedule_info) {
         array.push(
-          <OneDaySchedule day={ key } key={ "day_" + key } />
+          <Grid.Column key={ "day_" + key }>
+            <Header as="h4">{ key }日目</Header>
+            <OneDaySchedule day={ key } />
+          </Grid.Column>
         );
       }
 
       return array;
     })();
 
-    return (<div>{ schedules }</div>);
+    return (
+      <Grid stackable>
+        <Grid.Row columns={3}>
+          { schedules }
+        </Grid.Row>
+      </Grid>
+    );
   }
 }
 
