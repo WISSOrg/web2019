@@ -31,8 +31,9 @@ class ProgramCell extends Component {
     return (
       <Grid stackable>
         <Grid.Row>
-          <Grid.Column width={ 16 }>[{ talk_id }] <b>{ title }</b></Grid.Column>
-          <Grid.Column width={ 16 }>{ author_list }</Grid.Column>
+          <Grid.Column width={ 16 }>[{ talk_id }] <b>{ title }</b><br />{ author_list }</Grid.Column>
+        </Grid.Row>
+        <Grid.Row style={{ paddingTop: "8px", paddingBottom: "24px" }}>
           <Grid.Column width={ 4 }><Image src="https://via.placeholder.com/300x200?text=No+Image" fluid rounded /></Grid.Column>
           <Grid.Column width={ 6 } style={ paragraph_style }><b>要旨：</b>{ abstract }</Grid.Column>
           <Grid.Column width={ 6 } style={ paragraph_style }><b>採録時コメント：</b>{ review_comment }</Grid.Column>
@@ -49,7 +50,7 @@ class SessionTitle extends Component {
     const title = (target_session === "5" ? "" : "セッション" + target_session + ": ") + session_info[target_session]["name"];
 
     return (
-      <Segment textAlign='center' secondary >
+      <Segment textAlign='center' secondary style={{ marginTop: "3em", marginBottom: "2em" }}>
         <Header as="h2" id={ target_session } style={{ paddingTop: "8px" }}>
           { title }
         </Header>
