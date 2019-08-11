@@ -82,7 +82,7 @@ class OneDaySchedule extends Component {
     })();
 
     return (
-      <Table>
+      <Table striped unstackable>
         <Table.Body>
           { rows }
         </Table.Body>
@@ -99,7 +99,7 @@ class Schedule extends Component {
       for (var key in schedule_info) {
         array.push(
           <Grid.Column key={ "day_" + key }>
-            <Header as="h4">{ key }日目</Header>
+            <Header as="h3">{ key }日目</Header>
             <OneDaySchedule day={ key } />
           </Grid.Column>
         );
