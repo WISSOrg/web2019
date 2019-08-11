@@ -1,6 +1,6 @@
 import { StaticQuery, graphql } from "gatsby"
 import React, { Component } from 'react';
-import { Divider, Grid, Header, Image, List, Segment } from 'semantic-ui-react';
+import { Divider, Grid, Header, Image, Label, List, Segment } from 'semantic-ui-react';
 
 const session_info = {
   "1": { name: "Elephant Eggs", time: "1日目 15:40—16:50", session_chair: "（TBA）", chat_chair: "（TBA）" },
@@ -13,6 +13,30 @@ const session_info = {
 const paragraph_style = {
   fontSize: "0.8em",
 };
+
+const colormap = {
+  "l": "rgba(89, 113, 142, 0.3)",
+  "s": "rgba(108, 135, 96, 0.3)",
+  "d": "rgba(210, 193, 77, 0.3)",
+}
+
+class TypeLabel extends Component {
+  render() {
+    const type = this.props.type;
+    const message = (() => {
+      if (type === "l") { return "Long"; }
+      if (type === "s") { return "Short"; }
+      if (type === "d") { return "Discussion"; }
+      return null;
+    })();
+
+    if (type === "t") { return null; }
+
+    return (
+      <Label horizontal style={{ backgroundColor: colormap[type], marginLeft: "0.6em" }}>{ message }</Label>
+    );
+  }
+}
 
 class ProgramCell extends Component {
   render() {
@@ -31,7 +55,7 @@ class ProgramCell extends Component {
     return (
       <Grid stackable>
         <Grid.Row>
-          <Grid.Column width={ 16 }>[{ talk_id }] <b>{ title }</b><br />{ author_list }</Grid.Column>
+          <Grid.Column width={ 16 }>[{ talk_id }] <b>{ title }</b><TypeLabel type={ type } /><br />{ author_list }</Grid.Column>
         </Grid.Row>
         <Grid.Row style={{ paddingTop: "8px", paddingBottom: "24px" }}>
           <Grid.Column width={ 4 }><Image src="https://via.placeholder.com/300x200?text=No+Image" fluid rounded /></Grid.Column>
