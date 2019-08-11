@@ -10,6 +10,10 @@ const session_info = {
   "5": { name: "Long Teaser", time: "2日目 10:30--11:45", session_chair: "（TBA）", chat_chair: "（TBA）" },
 };
 
+const paragraph_style = {
+  fontSize: "0.8em",
+};
+
 class ProgramCell extends Component {
   render() {
     const {
@@ -24,7 +28,18 @@ class ProgramCell extends Component {
       type
     } = this.props;
 
-    return <Grid><Grid.Row columns={2}><Grid.Column>{ title }</Grid.Column><Grid.Column>{author_list}</Grid.Column></Grid.Row></Grid>
+    return (
+      <Grid>
+        <Grid.Row columns={1}>
+          <Grid.Column>[{ talk_id }] <b>{ title }</b></Grid.Column>
+          <Grid.Column>{ author_list }</Grid.Column>
+        </Grid.Row>
+        <Grid.Row columns={2}>
+          <Grid.Column><div style={ paragraph_style }><b>要旨：</b>{ abstract }</div></Grid.Column>
+          <Grid.Column><div style={ paragraph_style }><b>採録時コメント：</b>{ review_comment }</div></Grid.Column>
+        </Grid.Row>
+      </Grid>
+    );
   }
 }
 
@@ -45,11 +60,14 @@ class SessionCell extends Component {
           review_comment={ row.node.review_comment }
           image_file={ row.node.image_file }
           type={ row.node.type }
+          key= { row.node.session_id + "_" + row.node.talk_id }
           />
       : null
     ));
 
-    return <div><Header>Session</Header>{ items }</div>
+    const title = (target_session === "5" ? "" : "セッション" + target_session + ": ") + session_info[target_session]["name"];
+
+    return <div><Header as="h2">{ title }</Header>{ items }</div>
   }
 }
 
@@ -67,13 +85,13 @@ class ProgramImpl extends Component {
           program_data={ program_data }
           key={ "session_cell_" + key }
         />);
-        array.push(<Divider />)
+        array.push(<Divider key={ "session_divider_" + key }/>)
       }
 
       return array;
     })();
 
-    return <div><Header>Program</Header>{ session_cells }</div>
+    return <div><Header as="h1">登壇発表・ロングティザー発表</Header>{ session_cells }</div>
   }
 }
 
