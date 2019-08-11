@@ -1,6 +1,6 @@
 import { StaticQuery, graphql } from "gatsby"
 import React, { Component } from 'react';
-import { Divider, Header, Grid } from 'semantic-ui-react';
+import { Divider, Header, Image, Grid } from 'semantic-ui-react';
 
 const session_info = {
   "1": { name: "Elephant Eggs", time: "1日目 15:40--16:50", session_chair: "（TBA）", chat_chair: "（TBA）" },
@@ -29,14 +29,15 @@ class ProgramCell extends Component {
     } = this.props;
 
     return (
-      <Grid>
-        <Grid.Row columns={1}>
-          <Grid.Column>[{ talk_id }] <b>{ title }</b></Grid.Column>
-          <Grid.Column>{ author_list }</Grid.Column>
+      <Grid stackable>
+        <Grid.Row>
+          <Grid.Column width={ 16 }>[{ talk_id }] <b>{ title }</b></Grid.Column>
+          <Grid.Column width={ 16 }>{ author_list }</Grid.Column>
         </Grid.Row>
-        <Grid.Row columns={2}>
-          <Grid.Column><div style={ paragraph_style }><b>要旨：</b>{ abstract }</div></Grid.Column>
-          <Grid.Column><div style={ paragraph_style }><b>採録時コメント：</b>{ review_comment }</div></Grid.Column>
+        <Grid.Row>
+          <Grid.Column width={ 4 }><Image src="https://via.placeholder.com/300x200?text=No+Image" fluid rounded /></Grid.Column>
+          <Grid.Column width={ 6 } style={ paragraph_style }><b>要旨：</b>{ abstract }</Grid.Column>
+          <Grid.Column width={ 6 } style={ paragraph_style }><b>採録時コメント：</b>{ review_comment }</Grid.Column>
         </Grid.Row>
       </Grid>
     );
@@ -67,7 +68,7 @@ class SessionCell extends Component {
 
     const title = (target_session === "5" ? "" : "セッション" + target_session + ": ") + session_info[target_session]["name"];
 
-    return <div><Header as="h2">{ title }</Header>{ items }</div>
+    return <div><Header as="h2" id={ target_session }>{ title }</Header>{ items }</div>
   }
 }
 
