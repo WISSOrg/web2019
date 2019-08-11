@@ -52,16 +52,24 @@ class ProgramCell extends Component {
       type
     } = this.props;
 
+    const is_teaser = (type === "t");
+
     return (
       <Grid stackable>
         <Grid.Row>
           <Grid.Column width={ 16 }>[{ talk_id }] <b>{ title }</b><TypeLabel type={ type } /><br />{ author_list }</Grid.Column>
         </Grid.Row>
-        <Grid.Row style={{ paddingTop: "8px", paddingBottom: "24px" }}>
-          <Grid.Column width={ 4 }><Image src="https://via.placeholder.com/300x200?text=No+Image" fluid rounded /></Grid.Column>
-          <Grid.Column width={ 6 } style={ paragraph_style }><b>要旨：</b>{ abstract }</Grid.Column>
-          <Grid.Column width={ 6 } style={ paragraph_style }><b>採録時コメント：</b>{ review_comment }</Grid.Column>
-        </Grid.Row>
+        {
+          is_teaser
+          ?
+            null
+          :
+            <Grid.Row style={{ paddingTop: "8px", paddingBottom: "24px" }}>
+              <Grid.Column width={ 4 }><Image src="https://via.placeholder.com/300x200?text=No+Image" fluid rounded /></Grid.Column>
+              <Grid.Column width={ 6 } style={ paragraph_style }><b>要旨：</b>{ abstract }</Grid.Column>
+              <Grid.Column width={ 6 } style={ paragraph_style }><b>採録時コメント：</b>{ review_comment }</Grid.Column>
+            </Grid.Row>
+        }
       </Grid>
     );
   }
