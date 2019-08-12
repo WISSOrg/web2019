@@ -67,7 +67,7 @@ class OneDaySchedule extends Component {
       var array = [];
 
       schedule_info[day].forEach(function(elem) {
-        const icon = <Icon circular inverted name={ icon_map[elem["type"]] } />
+        const icon = <Icon inverted circular style={{ opacity: 0.6 }} name={ icon_map[elem["type"]] } />
 
         array.push(
           <Table.Row key={ day + "_" + elem["time"] } >
@@ -82,7 +82,7 @@ class OneDaySchedule extends Component {
     })();
 
     return (
-      <Table striped unstackable>
+      <Table unstackable basic="very">
         <Table.Body>
           { rows }
         </Table.Body>
@@ -99,7 +99,7 @@ class Schedule extends Component {
       for (var key in schedule_info) {
         array.push(
           <Grid.Column key={ "day_" + key }>
-            <Header as="h3">{ key }日目</Header>
+            <Header as="h3">{ key }日目 (9/{ 25 + parseInt(key) - 1 })</Header>
             <OneDaySchedule day={ key } />
           </Grid.Column>
         );
@@ -248,7 +248,7 @@ class ProgramImpl extends Component {
       <div>
         <Header as="h1">全体スケジュール</Header>
         <Schedule />
-        <Divider />
+        <Divider style={{ marginTop: "2.5em", marginBottom: "2.5em" }}/>
         <Header as="h1">登壇発表・ロングティザー発表</Header>
         { session_cells }
       </div>
