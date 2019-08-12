@@ -9,7 +9,7 @@ import CommitteeContent from '../components/committeecontent';
 import Info from '../components/info';
 import Masthead from '../components/masthead';
 import PageFooter from '../components/pagefooter';
-import { PageHeaderBg, PageHeaderButton } from '../components/pageheader';
+import PageHeader from '../components/pageheader';
 import Program from '../components/program';
 import Seo from '../components/seo';
 import SideMenu from '../components/sidemenu';
@@ -82,8 +82,7 @@ export default class Template extends Component {
             <Visibility onUpdate={this.handleUpdate}>
               { isTop ? <Masthead hideMenu={this.hideMenu} /> : null }
             </Visibility>
-            <PageHeaderBg hideMenu={this.hideMenu} visible={showMenu} />
-            <PageHeaderButton toggleMenu={this.toggleMenu} hideMenu={this.hideMenu} visible={showMenu} />
+            <PageHeader toggleMenu={this.toggleMenu} hideMenu={this.hideMenu} showMenu={showMenu} />
             { isTop ? null : <div style={{ height: '74px' }}></div> }
             <Container style={{ minHeight: '100vh', paddingTop: '40px', paddingBottom: '80px' }}>
               { isTop ? <Info /> : null }

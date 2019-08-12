@@ -6,7 +6,7 @@ import TitleLogo from '../images/logo/logo-with-title.png';
 const height = '72px'
 const dropshadow_style = { filter: 'drop-shadow(0px 4px 10px rgba(56, 61, 75, 0.5)' };
 
-export class PageHeaderBg extends Component {
+class PageHeaderBg extends Component {
   render() {
     const { visible, hideMenu } = this.props;
 
@@ -38,7 +38,7 @@ export class PageHeaderBg extends Component {
   }
 }
 
-export class PageHeaderButton extends Component {
+class PageHeaderButton extends Component {
   render() {
     const { visible, hideMenu, toggleMenu } = this.props;
 
@@ -55,6 +55,19 @@ export class PageHeaderButton extends Component {
           <Button icon='bars' onClick={toggleMenu} />
         </Container>
       </Segment>
+    );
+  }
+}
+
+export default class PageHeader extends Component {
+  render() {
+    const { hideMenu, toggleMenu, showMenu } = this.props;
+
+    return (
+      <div>
+        <PageHeaderBg hideMenu={hideMenu} visible={showMenu} />
+        <PageHeaderButton toggleMenu={toggleMenu} hideMenu={hideMenu} visible={showMenu} />
+      </div>
     );
   }
 }
