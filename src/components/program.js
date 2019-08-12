@@ -18,6 +18,7 @@ const colormap = {
   "l": "rgba(89, 113, 142, 0.3)",
   "s": "rgba(108, 135, 96, 0.3)",
   "d": "rgba(210, 193, 77, 0.3)",
+  "t": "rgba(120, 120, 120, 0.3)",
 }
 
 const schedule_info = {
@@ -109,7 +110,7 @@ class Schedule extends Component {
     })();
 
     return (
-      <Grid stackable>
+      <Grid stackable style={{ marginTop: "1em" }}>
         <Grid.Row columns={3}>
           { schedules }
         </Grid.Row>
@@ -125,10 +126,9 @@ class TypeLabel extends Component {
       if (type === "l") { return "Long"; }
       if (type === "s") { return "Short"; }
       if (type === "d") { return "Discussion"; }
+      if (type === "t") { return "Teaser"; }
       return null;
     })();
-
-    if (type === "t") { return null; }
 
     return (
       <Label horizontal style={{ backgroundColor: colormap[type], marginLeft: "0.6em" }}>{ message }</Label>
@@ -225,6 +225,19 @@ class SessionCell extends Component {
   }
 }
 
+class Legend extends Component {
+  render() {
+    return (
+      <List bulleted>
+        <List.Item><TypeLabel type="l" />: ロング発表（発表15分・質疑10分）</List.Item>
+        <List.Item><TypeLabel type="s" />: ショート発表（発表10分・質疑5分）</List.Item>
+        <List.Item><TypeLabel type="d" />: 議論枠発表（発表7.5分・質疑7.5分）</List.Item>
+        <List.Item><TypeLabel type="t" />: Long Teaser発表（発表5分・質疑3分）</List.Item>
+      </List>
+    );
+  }
+}
+
 class ProgramImpl extends Component {
   render() {
     const program_data = this.props.program_data;
@@ -250,6 +263,7 @@ class ProgramImpl extends Component {
         <Schedule />
         <Divider style={{ marginTop: "2.5em", marginBottom: "2.5em" }}/>
         <Header as="h1">登壇発表・ロングティザー発表</Header>
+        <Legend />
         { session_cells }
       </div>
     );
