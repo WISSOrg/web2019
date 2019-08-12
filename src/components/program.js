@@ -2,6 +2,9 @@ import { StaticQuery, graphql } from "gatsby"
 import React, { Component } from 'react';
 import { Divider, Grid, Header, Icon, Image, Label, List, Segment, Table } from 'semantic-ui-react';
 
+// This is only a temporal solution; it should be solved by assetPrefix https://www.gatsbyjs.org/docs/asset-prefix/
+const path_prefix = "/WISS2019"
+
 const session_info = {
   "1": { name: "Elephant Eggs", time: "1日目 15:40—16:50", session_chair: "（TBA）", chat_chair: "（TBA）" },
   "2": { name: "Elephant Eggs", time: "2日目 09:00—10:15", session_chair: "（TBA）", chat_chair: "（TBA）" },
@@ -152,6 +155,8 @@ class ProgramCell extends Component {
 
     const is_teaser = (type === "t");
 
+    const image_path = path_prefix + "/program/" + (image_file === "" ? "no-image.jpg" : image_file);
+
     return (
       <Grid stackable>
         <Grid.Row>
@@ -163,7 +168,7 @@ class ProgramCell extends Component {
             null
           :
             <Grid.Row style={{ paddingTop: "8px", paddingBottom: "24px" }}>
-              <Grid.Column width={ 4 }><Image src="https://via.placeholder.com/400x300?text=No+Image" fluid rounded /></Grid.Column>
+              <Grid.Column width={ 4 }><Image src={ image_path } fluid rounded /></Grid.Column>
               <Grid.Column width={ 6 } style={ paragraph_style }><b>要旨：</b>{ abstract }</Grid.Column>
               <Grid.Column width={ 6 } style={ paragraph_style }><b>採録時コメント：</b>{ review_comment }</Grid.Column>
             </Grid.Row>
