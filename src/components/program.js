@@ -21,7 +21,7 @@ const colormap = {
   "l": "rgba(89, 113, 142, 0.3)",
   "s": "rgba(108, 135, 96, 0.3)",
   "d": "rgba(210, 193, 77, 0.3)",
-  "t": "rgba(120, 120, 120, 0.3)",
+  "t": "rgba(150, 150, 150, 0.3)",
 }
 
 const schedule_info = {
@@ -29,6 +29,7 @@ const schedule_info = {
     { time: "13:00", type: "info", name: "オープニング" },
     { time: "13:30", type: "live", name: "デモ中継" },
     { time: "14:00", type: "demo", name: "デモ・ポスターセッション1" },
+    { time: "15:30", type: "", name: "デモ・ポスター終了" },
     { time: "15:40", type: "talk", name: "セッション1: " + session_info["1"]["name"] },
     { time: "16:50", type: "rest", name: "休憩" },
     { time: "17:05", type: "", name: "（調整中）" },
@@ -43,6 +44,7 @@ const schedule_info = {
     { time: "11:45", type: "food", name: "昼食" },
     { time: "13:00", type: "live", name: "デモ中継" },
     { time: "13:30", type: "demo", name: "デモ・ポスターセッション2" },
+    { time: "15:00", type: "", name: "デモ・ポスター終了" },
     { time: "15:10", type: "talk", name: "セッション3: " + session_info["3"]["name"] },
     { time: "16:15", type: "rest", name: "休憩" },
     { time: "16:30", type: "talk", name: "セッション4: " + session_info["4"]["name"] },
@@ -50,7 +52,11 @@ const schedule_info = {
     { time: "??:??", type: "", name: "（TBA）" },
   ],
   "3": [
-    { time: "??:??", type: "", name: "（TBA）" },
+    { time: "09:00", type: "live", name: "デモ中継" },
+    { time: "09:30", type: "demo", name: "デモ・ポスターセッション3" },
+    { time: "11:00", type: "", name: "デモ・ポスター終了" },
+    { time: "11:10", type: "info", name: "投票・アンケート記入" },
+    { time: "11:30", type: "info", name: "タウンホールミーティング・クロージング (—12:00)" },
   ],
 };
 
