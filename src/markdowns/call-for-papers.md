@@ -143,7 +143,7 @@ WISS2018では、残念ながら正式な登壇発表として採択できなか
 - [WISS2019 LaTeX2e 投稿用スタイルファイル](/download/WISS_Template_2019_0408_latex.zip) (著者名及び所属を入れてください。Macご利用の方で、コンパイルに失敗する場合はソースコードをutf8に変更して試してみてください)
   - Overleaf上で用いる場合は[こちら](https://www.overleaf.com/latex/templates/wiss2019-template/wkrtxwzmmrpx)
 - [WISS2019 MS Word 投稿用スタイルファイル](/download/WISS_Template_2019_0408_word.docx) (著者名及び所属を入れてください。)
-- [WISS2019 論文よくあるミス一覧]() __（準備中）__
+- [WISS2019 論文よくあるミス一覧](/download/WISSTemplate_20191410_erros.docx)
 
 - 原稿フォーマットは下記の論文テンプレート（LaTeX2eのスタイルファイル、またはWordファイル）をご利用ください。PDFのファイルサイズは20Mバイト以下とします。
 - 原稿フォーマットが著しく異なる場合は不採択となる場合があります。
