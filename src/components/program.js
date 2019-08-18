@@ -6,10 +6,10 @@ import { Divider, Grid, Header, Icon, Image, Label, List, Segment, Table } from 
 const path_prefix = "/WISS2019"
 
 const session_info = {
-  "1": { name: "Elephant Eggs", time: "1日目 15:40—16:50", session_chair: "（TBA）", chat_chair: "（TBA）" },
-  "2": { name: "Elephant Eggs", time: "2日目 09:00—10:15", session_chair: "（TBA）", chat_chair: "（TBA）" },
-  "3": { name: "Elephant Eggs", time: "2日目 15:10—16:15", session_chair: "（TBA）", chat_chair: "（TBA）" },
-  "4": { name: "Elephant Eggs", time: "2日目 16:30—17:50", session_chair: "（TBA）", chat_chair: "（TBA）" },
+  "1": { name: "Upskilling", time: "1日目 15:40—16:50", session_chair: "（TBA）", chat_chair: "（TBA）" },
+  "2": { name: "Shaping & Imaging", time: "2日目 09:00—10:15", session_chair: "（TBA）", chat_chair: "（TBA）" },
+  "3": { name: "Feedback", time: "2日目 15:10—16:15", session_chair: "（TBA）", chat_chair: "（TBA）" },
+  "4": { name: "Touch & Drink", time: "2日目 16:30—17:50", session_chair: "（TBA）", chat_chair: "（TBA）" },
   "5": { name: "Long Teaser", time: "2日目 10:30—11:45", session_chair: "（TBA）", chat_chair: "（TBA）" },
 };
 
