@@ -11,6 +11,7 @@ const session_info = {
   "3": { name: "Feedback", time: "2日目 15:10—16:15", session_chair: "（TBA）", chat_chair: "（TBA）" },
   "4": { name: "Touch & Drink", time: "2日目 16:30—17:50", session_chair: "（TBA）", chat_chair: "（TBA）" },
   "5": { name: "Long Teaser", time: "2日目 10:30—11:45", session_chair: "（TBA）", chat_chair: "（TBA）" },
+  "6": { name: "トップカンファレンス発表論文紹介セッション", time: "1日目 17:05—18:05", session_chair: "（TBA）", chat_chair: "（TBA）" },
 };
 
 const paragraph_style = {
@@ -32,7 +33,7 @@ const schedule_info = {
     { time: "15:30", type: "rest", name: "休憩" },
     { time: "15:40", type: "talk", name: "セッション1: " + session_info["1"]["name"] },
     { time: "16:50", type: "rest", name: "休憩" },
-    { time: "17:05", type: "", name: "（調整中）" },
+    { time: "17:05", type: "talk", name: "トップカンファレンス発表論文紹介セッション" },
     { time: "18:05", type: "", name: "セッション終了" },
     { time: "18:30", type: "food", name: "夕食" },
     { time: "??:??", type: "", name: "（TBA）" },
@@ -68,6 +69,27 @@ const icon_map = {
   "rest": "coffee",
   "info": "info",
 }
+
+const invited_talks = [
+  {
+    "speaker": "粥川 青汰",
+    "title": "BBeep: A Sonic Collision Avoidance System for Blind Travellers and Nearby Pedestrians",
+    "authors": "Seita Kayukawa, Keita Higuchi, João Guerreiro, Shigeo Morishima, Yoichi Sato, Kris Kitani, and Chieko Asakawa",
+    "venue": "In Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems (CHI '19)",
+  },
+  {
+    "speaker": "矢倉 大夢",
+    "title": "REsCUE: A framework for REal-time feedback on behavioral CUEs using multimodal anomaly detection",
+    "authors": "Riku Arakawa and Hiromu Yakura",
+    "venue": "In Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems (CHI '19)",
+  },
+  {
+    "speaker": "尾形 正恭",
+    "title": "Magneto-Haptics: Embedding Magnetic Force Feedback for Physical Interactions",
+    "authors": "Masa Ogata",
+    "venue": "In Proceedings of the 31st Annual ACM Symposium on User Interface Software and Technology (UIST '18)",
+  },
+];
 
 class OneDaySchedule extends Component {
   render() {
@@ -188,7 +210,7 @@ class SessionTitle extends Component {
   render() {
     const target_session = this.props.target_session;
 
-    const title = (target_session === "5" ? "" : "セッション" + target_session + ": ") + session_info[target_session]["name"];
+    const title = (target_session === "5" || target_session === "6" ? "" : "セッション" + target_session + ": ") + session_info[target_session]["name"];
 
     return (
       <Segment textAlign='center' secondary style={{ marginTop: "3em", marginBottom: "2em" }}>
@@ -201,6 +223,27 @@ class SessionTitle extends Component {
           <List.Item>チャット座長：{ session_info[target_session]["chat_chair"] }</List.Item>
         </List>
       </Segment>
+    );
+  }
+}
+
+class InvitedTalks extends Component {
+  render() {
+    var talks = [];
+    invited_talks.forEach(function(elem) {
+      talks.push(
+        <Grid.Row>
+          <Grid.Column>
+            { elem["speaker"] }: <b>{ elem["title"] }</b><br />{ elem["authors"] }.<br />{ elem["venue"] }
+          </Grid.Column>
+        </Grid.Row>
+      );
+    });
+
+    return (
+      <Grid>
+        { talks }
+      </Grid>
     );
   }
 }
@@ -231,6 +274,7 @@ class SessionCell extends Component {
       <div>
         <SessionTitle target_session={ target_session } />
         { items }
+        { target_session === "6" ? <InvitedTalks /> : null }
       </div>
     );
   }
