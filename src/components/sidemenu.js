@@ -31,7 +31,7 @@ const contents = {
   ],
   "WISSについて": [
     <a href="https://twitter.com/wiss_official">公式ツイッター</a>,
-    <span>名札システム（準備中）</span>,
+    <Link to="/namecard">名札システム</Link>,
     <span>ローカル情報（準備中）</span>,
     <span>表彰（準備中）</span>,
     <Link to="/committee">WISS委員一覧</Link>,
