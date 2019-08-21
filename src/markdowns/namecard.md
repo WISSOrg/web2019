@@ -38,10 +38,10 @@ WISSでは、参加者間の交流促進・議論の活性化のために、名�
 
 なお、WISSで使用している名札ホルダーは(株)スガタの「イベント用名札 ハガキサイズ」で、内寸 W103×H150mm です。
 
-- [PowerPoint版](/download/namecard/2019nametag-template.pptx)
-- [PDF版](/download/namecard/2019nametag-template.pdf)
-- [PowerPoint版（背景のみ）](/download/namecard/2019nametag-background.pptx)
-- [PDF版（背景のみ）](/download/namecard/2019nametag-background.pdf)
+- [PowerPoint版](/download/nametag/wiss2019nametag-template.pptx)
+- [PDF版](/download/nametag/wiss2019nametag-template.pdf)
+- [PowerPoint版（背景のみ）](/download/nametag/wiss2019nametag-background.pptx)
+- [PDF版（背景のみ）](/download/nametag/wiss2019nametag-background.pdf)
 
 ## 注意
 
