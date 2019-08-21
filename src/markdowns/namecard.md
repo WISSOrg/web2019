@@ -19,14 +19,14 @@ WISSでは、参加者間の交流促進・議論の活性化のために、名�
 
 などなど、参加者の皆さんの創意工夫で、名札を様々にお役立ていただけます。
 
-![sample 1](/images/namecard_usage1.jpg)
-![sample 2](/images/namecard_usage2.jpg)
+![sample 1](/WISS2019/images/namecard_usage1.jpg)
+![sample 2](/WISS2019/images/namecard_usage2.jpg)
 
 こんな感じで、名札を今まで以上に有効活用できるようにしました!
 
 テンプレートが用意されていますから、それを元に自分で名札をデザインできます。例えば...
 
-![other examples](/images/namecard_samples.jpg)
+![other examples](/WISS2019/images/namecard_samples.jpg)
 
 工夫次第でもっとおかしなものまで入れられる?（電子基板を仕込んだ人も居ました...）
 
