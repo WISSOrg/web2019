@@ -32,7 +32,7 @@ const contents = {
   "WISSについて": [
     <a href="https://twitter.com/wiss_official">公式ツイッター</a>,
     <Link to="/namecard">名札システム</Link>,
-    <span>ローカル情報（準備中）</span>,
+    <Link to="/local">ローカル情報</Link>,
     <span>表彰（準備中）</span>,
     <Link to="/committee">WISS委員一覧</Link>,
     <Link to="/archive">過去のWISS</Link>,
