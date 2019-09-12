@@ -7,6 +7,7 @@ import Isid from '../images/sponsors/isid.png';
 import Dentsu from '../images/sponsors/dentsu.png';
 import Bnr from '../images/sponsors/bnr.jpg';
 import TeamLab from '../images/sponsors/teamlab.png';
+import Tis from '../images/sponsors/tis.jpg';
 import Future from '../images/sponsors/future.png';
 
 // Sponsor definitions
@@ -35,6 +36,11 @@ const sponsor_definitions = [
     name: "チームラボ株式会社",
     image: TeamLab,
     link: "https://www.team-lab.com/",
+  },
+  {
+    name: "TIS株式会社",
+    image: Tis,
+    link: "https://www.tis.co.jp/",
   },
   {
     name: "フューチャー株式会社",
