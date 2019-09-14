@@ -103,19 +103,6 @@ class SessionCell extends Component {
   }
 }
 
-class Legend extends Component {
-  render() {
-    return (
-      <List bulleted>
-        <List.Item><TypeLabel type="l" />: ロング発表（発表15分・質疑10分）</List.Item>
-        <List.Item><TypeLabel type="s" />: ショート発表（発表10分・質疑5分）</List.Item>
-        <List.Item><TypeLabel type="d" />: 議論枠発表（発表7.5分・質疑7.5分）</List.Item>
-        <List.Item><TypeLabel type="t" />: Long Teaser発表（発表5分・質疑3分）</List.Item>
-      </List>
-    );
-  }
-}
-
 class DemoPosterImpl extends Component {
   render() {
     const program_data = this.props.program_data;
@@ -138,7 +125,6 @@ class DemoPosterImpl extends Component {
     return (
       <div>
         <Header as="h1">デモ・ポスター発表</Header>
-        <Legend />
         { session_cells }
       </div>
     );
