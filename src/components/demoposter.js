@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 import { Divider, Grid, Header, Icon, Image, Label, List, Segment, Table } from 'semantic-ui-react';
 
 const session_info = {
-  "1": { name: "Upskilling", time: "1日目 15:40—16:50", session_chair: "（TBA）", chat_chair: "（TBA）" },
-  "2": { name: "Shaping & Imaging", time: "2日目 09:00—10:15", session_chair: "（TBA）", chat_chair: "（TBA）" },
-  "3": { name: "Feedback", time: "2日目 15:10—16:15", session_chair: "（TBA）", chat_chair: "（TBA）" },
+  "1": { name: "デモ・ポスターセッション1", time: "1日目 14:00—15:30" },
+  "2": { name: "デモ・ポスターセッション2", time: "2日目 13:30—15:00" },
+  "3": { name: "デモ・ポスターセッション3", time: "3日目 09:30—11:00" },
 };
 
 const colormap = {
@@ -60,7 +60,7 @@ class SessionTitle extends Component {
   render() {
     const target_session = this.props.target_session;
 
-    const title = (target_session === "5" || target_session === "6" ? "" : "セッション" + target_session + ": ") + session_info[target_session]["name"];
+    const title = session_info[target_session]["name"];
 
     return (
       <Segment textAlign='center' secondary style={{ marginTop: "3em", marginBottom: "2em" }}>
@@ -69,8 +69,6 @@ class SessionTitle extends Component {
         </Header>
         <List bulleted horizontal>
           <List.Item>{ session_info[target_session]["time"] }</List.Item>
-          <List.Item>座長：{ session_info[target_session]["session_chair"] }</List.Item>
-          <List.Item>チャット座長：{ session_info[target_session]["chat_chair"] }</List.Item>
         </List>
       </Segment>
     );
