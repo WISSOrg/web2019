@@ -1,4 +1,4 @@
-day,room,booth-number,paper-id,booth-id,type,title,authors
+day,room,booth_number,paper_id,booth_id,type,title,author_list
 2,G,13,2,G-13,ショート採録,（公開準備中）,"久保 勇貴 (NTT)，
 江口 佳那 (NTT)，
 青木 良輔 (NTT)，
