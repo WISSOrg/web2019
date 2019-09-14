@@ -170,9 +170,7 @@ class TypeLabel extends Component {
 class ProgramCell extends Component {
   render() {
     const {
-      submission_id,
       talk_id,
-      session_id,
       title,
       author_list,
       abstract,

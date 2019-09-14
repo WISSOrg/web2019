@@ -1,6 +1,6 @@
 import { StaticQuery, graphql } from "gatsby"
 import React, { Component } from 'react';
-import { Divider, Grid, Header, Icon, Image, Label, List, Segment, Table } from 'semantic-ui-react';
+import { Header, Label, List, Segment } from 'semantic-ui-react';
 
 const session_info = {
   "1": { name: "デモ・ポスターセッション1", time: "1日目 14:00—15:30" },
@@ -41,7 +41,6 @@ class TypeLabel extends Component {
 class ProgramCell extends Component {
   render() {
     const {
-      day,
       booth_id,
       title,
       author_list,
