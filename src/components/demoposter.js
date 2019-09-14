@@ -6,9 +6,6 @@ const session_info = {
   "1": { name: "Upskilling", time: "1日目 15:40—16:50", session_chair: "（TBA）", chat_chair: "（TBA）" },
   "2": { name: "Shaping & Imaging", time: "2日目 09:00—10:15", session_chair: "（TBA）", chat_chair: "（TBA）" },
   "3": { name: "Feedback", time: "2日目 15:10—16:15", session_chair: "（TBA）", chat_chair: "（TBA）" },
-  "4": { name: "Touch & Drink", time: "2日目 16:30—17:50", session_chair: "（TBA）", chat_chair: "（TBA）" },
-  "5": { name: "Long Teaser", time: "2日目 10:30—11:45", session_chair: "（TBA）", chat_chair: "（TBA）" },
-  "6": { name: "トップカンファレンス発表論文紹介セッション", time: "1日目 17:05—18:05", session_chair: "（TBA）", chat_chair: "（TBA）" },
 };
 
 const colormap = {
@@ -51,8 +48,6 @@ class ProgramCell extends Component {
 
     const is_teaser = (type === "t");
 
-    const image_path = path_prefix + "/program/" + (image_file === "" ? "no-image.jpg" : image_file);
-
     return (
       <Grid stackable>
         <Grid.Row>
@@ -64,9 +59,6 @@ class ProgramCell extends Component {
             null
           :
             <Grid.Row style={{ paddingTop: "8px", paddingBottom: "24px" }}>
-              <Grid.Column width={ 4 }><Image src={ image_path } fluid rounded /></Grid.Column>
-              <Grid.Column width={ 6 } style={ paragraph_style }><b>要旨：</b>{ abstract }</Grid.Column>
-              <Grid.Column width={ 6 } style={ paragraph_style }><b>採録時コメント：</b>{ review_comment }</Grid.Column>
             </Grid.Row>
         }
       </Grid>
@@ -121,7 +113,6 @@ class SessionCell extends Component {
       <div>
         <SessionTitle target_session={ target_session } />
         { items }
-        { target_session === "6" ? <InvitedTalks /> : null }
       </div>
     );
   }
@@ -179,6 +170,7 @@ export default class DemoPoster extends React.Component {
           allDemoPosterCsv {
             edges {
               node {
+                day
                 booth_id
                 type
                 title
