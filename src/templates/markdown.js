@@ -14,6 +14,7 @@ import Program from '../components/program';
 import Seo from '../components/seo';
 import SideMenu from '../components/sidemenu';
 import SponsorGrid from '../components/sponsorgrid';
+import DemoPoster from '../components/demoposter'
 
 export default class Template extends Component {
   state = {
@@ -55,6 +56,7 @@ export default class Template extends Component {
     const isTop = (path === "/");
     const isCommittee = (path === "/committee");
     const isProgram = (path === "/program");
+    const isDemoPoster = (path === "/demo-poster");
     const showSponsors = (path === "/") || (path === "/sponsorship");
 
     const showMenu = isTop ? (mastheadVisibility.percentagePassed > 0.8 || mastheadVisibility.bottomPassed) : true;
@@ -66,6 +68,8 @@ export default class Template extends Component {
       } else if (isProgram) {
         // If the page is about the main program, display a custom component
         return (<Program />);
+      } else if (isDemoPoster) {
+        return (<DemoPoster />);
       } else {
         // Render the content written in Markdown
         return (<div dangerouslySetInnerHTML={{__html: html}} />);

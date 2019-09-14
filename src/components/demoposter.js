@@ -140,7 +140,7 @@ class Legend extends Component {
   }
 }
 
-class ProgramImpl extends Component {
+class DemoPosterImpl extends Component {
   render() {
     const program_data = this.props.program_data;
 
@@ -161,10 +161,7 @@ class ProgramImpl extends Component {
 
     return (
       <div>
-        <Header as="h1">全体スケジュール</Header>
-        <Schedule />
-        <Divider style={{ marginTop: "2.5em", marginBottom: "2.5em" }}/>
-        <Header as="h1">登壇発表・ロングティザー発表</Header>
+        <Header as="h1">デモ・ポスター発表</Header>
         <Legend />
         { session_cells }
       </div>
@@ -172,32 +169,27 @@ class ProgramImpl extends Component {
   }
 }
 
-export default class Program extends React.Component {
+export default class DemoPoster extends React.Component {
   render() {
     return (
       // StaticQuery is a graphql functionality for non-page component
       <StaticQuery
         query={graphql`
         query {
-          allProgramCsv {
+          allDemoPosterCsv {
             edges {
               node {
-                submission_id
-                talk_id
-                session_id
+                booth_id
+                type
                 title
                 author_list
-                abstract
-                review_comment
-                image_file
-                type
               }
             }
           }
         }
       `}
       // Pass the data for the sub class
-      render={data => <ProgramImpl program_data={ data } />} />
+      render={data => <DemoPosterImpl program_data={ data } />} />
     );
   }
 }
