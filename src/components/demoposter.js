@@ -9,10 +9,14 @@ const session_info = {
 };
 
 const colormap = {
-  "l": "rgba(89, 113, 142, 0.3)",
-  "s": "rgba(108, 135, 96, 0.3)",
-  "d": "rgba(210, 193, 77, 0.3)",
-  "t": "rgba(150, 150, 150, 0.3)",
+  "ロング採録": "rgba(89, 113, 142, 0.3)",
+  "ショート採録": "rgba(108, 135, 96, 0.3)",
+  "議論枠採録": "rgba(210, 193, 77, 0.3)",
+  "ロングティザー発表": "rgba(150, 150, 150, 0.3)",
+  "予稿ありデモポスター": "rgba(150, 150, 150, 0.3)",
+  "予稿なしデモポスター": "rgba(150, 150, 150, 0.3)",
+  "招待デモ": "rgba(150, 150, 150, 0.3)",
+  "企業展示": "rgba(150, 150, 150, 0.3)",
 }
 
 class TypeLabel extends Component {
@@ -92,19 +96,14 @@ class SessionCell extends Component {
     const program_data = this.props.program_data;
     const target_session = this.props.target_session;
 
-    const items = program_data.allProgramCsv.edges.map((row, i) => (
-      target_session === row.node.session_id
+    const items = program_data.allDemoPosterCsv.edges.map((row, i) => (
+      target_session === row.node.day
       ? <ProgramCell
-          submission_id={ row.node.submission_id }
-          talk_id={ row.node.talk_id }
-          session_id={ row.node.session_id }
           title={ row.node.title }
           author_list={ row.node.author_list }
-          abstract={ row.node.abstract }
-          review_comment={ row.node.review_comment }
-          image_file={ row.node.image_file }
+          booth_id={ row.node.booth_id }
           type={ row.node.type }
-          key= { row.node.session_id + "_" + row.node.talk_id }
+          key= { row.node.day + "_" + row.node.booth_id }
           />
       : null
     ));
