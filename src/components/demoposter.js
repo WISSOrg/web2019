@@ -39,33 +39,17 @@ class TypeLabel extends Component {
 class ProgramCell extends Component {
   render() {
     const {
-      submission_id,
-      talk_id,
-      session_id,
+      day,
+      booth_id,
       title,
       author_list,
-      abstract,
-      review_comment,
-      image_file,
       type
     } = this.props;
 
-    const is_teaser = (type === "t");
-
     return (
-      <Grid stackable>
-        <Grid.Row>
-          <Grid.Column width={ 16 }>[{ talk_id }] <b>{ title }</b><TypeLabel type={ type } /><br />{ author_list }</Grid.Column>
-        </Grid.Row>
-        {
-          is_teaser
-          ?
-            null
-          :
-            <Grid.Row style={{ paddingTop: "8px", paddingBottom: "24px" }}>
-            </Grid.Row>
-        }
-      </Grid>
+      <p>
+        [{ booth_id }] <b>{ title }</b><TypeLabel type={ type } /><br />{ author_list }
+      </p>
     );
   }
 }
