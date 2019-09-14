@@ -19,7 +19,7 @@ const contents = {
   ],
   "プログラム": [
     <Link to="/program">全体スケジュール・登壇発表・ロングティザー発表</Link>,
-    <span>デモ・ポスター発表（準備中）</span>,
+    <Link to="/demo-poster">デモ・ポスター発表</Link>,
   ],
   "動画中継": [
     <span>１日目（準備中）</span>,
