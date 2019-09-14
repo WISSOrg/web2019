@@ -23,10 +23,12 @@ class TypeLabel extends Component {
   render() {
     const type = this.props.type;
     const message = (() => {
-      if (type === "l") { return "Long"; }
-      if (type === "s") { return "Short"; }
-      if (type === "d") { return "Discussion"; }
-      if (type === "t") { return "Teaser"; }
+      if (type === "ロング採録" || type === "ショート採録" || type === "議論枠採録") { return "登壇発表"; }
+      if (type === "ロングティザー発表") { return "ロングティザー発表"; }
+      if (type === "予稿ありデモポスター") { return "デモ・ポスター発表（予稿あり）"; }
+      if (type === "予稿なしデモポスター") { return "デモ・ポスター発表（予稿なし）"; }
+      if (type === "招待デモ") { return "招待デモ・ポスター発表"; }
+      if (type === "企業展示") { return "スポンサー企業展示"; }
       return null;
     })();
 
