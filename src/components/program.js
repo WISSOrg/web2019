@@ -6,12 +6,12 @@ import { Divider, Grid, Header, Icon, Image, Label, List, Segment, Table } from 
 const path_prefix = "/WISS2019"
 
 const session_info = {
-  "1": { name: "Upskilling", time: "1日目 15:40—16:50", session_chair: "（TBA）", chat_chair: "（TBA）" },
-  "2": { name: "Shaping & Imaging", time: "2日目 09:00—10:15", session_chair: "（TBA）", chat_chair: "（TBA）" },
-  "3": { name: "Feedback", time: "2日目 15:10—16:15", session_chair: "（TBA）", chat_chair: "（TBA）" },
-  "4": { name: "Touch & Drink", time: "2日目 16:30—17:50", session_chair: "（TBA）", chat_chair: "（TBA）" },
-  "5": { name: "Long Teaser", time: "2日目 10:30—11:45", session_chair: "（TBA）", chat_chair: "（TBA）" },
-  "6": { name: "トップカンファレンス発表論文紹介セッション", time: "1日目 17:05—18:05", session_chair: "（TBA）", chat_chair: "（TBA）" },
+  "1": { name: "Upskilling", time: "1日目 15:40—16:50", session_chair: "樋口 啓太", chat_chair: "福地 健太郎" },
+  "2": { name: "Shaping & Imaging", time: "2日目 09:00—10:15", session_chair: "横窪 安奈", chat_chair: "瀬川 典久" },
+  "3": { name: "Feedback", time: "2日目 15:10—16:15", session_chair: "加藤 邦拓", chat_chair: "真鍋 宏幸" },
+  "4": { name: "Touch & Drink", time: "2日目 16:30—17:50", session_chair: "加藤 淳", chat_chair: "宮下 芳明" },
+  "5": { name: "Long Teaser", time: "2日目 10:30—11:45", session_chair: "伊藤 貴之", chat_chair: "入江 英嗣" },
+  "6": { name: "トップカンファレンス発表論文紹介セッション", time: "1日目 17:05—18:05", session_chair: "伊藤 貴之", chat_chair: "倉本 至" },
 };
 
 const paragraph_style = {
