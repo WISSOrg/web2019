@@ -28,7 +28,7 @@ const colormap = {
 const schedule_info = {
   "1": [
     { time: "13:00", type: "info", name: "オープニング" },
-    { time: "13:30", type: "live", name: "デモ中継" },
+    { time: "13:30", type: "live", name: "デモプレビュー" },
     { time: "14:00", type: "demo", name: "デモ・ポスターセッション1" },
     { time: "15:30", type: "rest", name: "休憩" },
     { time: "15:40", type: "talk", name: "セッション1: " + session_info["1"]["name"] },
@@ -43,7 +43,7 @@ const schedule_info = {
     { time: "10:15", type: "rest", name: "休憩" },
     { time: "10:30", type: "talk", name: session_info["5"]["name"] },
     { time: "11:45", type: "food", name: "昼食" },
-    { time: "13:00", type: "live", name: "デモ中継" },
+    { time: "13:00", type: "live", name: "デモプレビュー" },
     { time: "13:30", type: "demo", name: "デモ・ポスターセッション2" },
     { time: "15:00", type: "rest", name: "休憩" },
     { time: "15:10", type: "talk", name: "セッション3: " + session_info["3"]["name"] },
@@ -54,7 +54,7 @@ const schedule_info = {
     { time: "21:00", type: "night", name: "ナイトセッション" },
   ],
   "3": [
-    { time: "09:00", type: "live", name: "デモ中継" },
+    { time: "09:00", type: "live", name: "デモプレビュー" },
     { time: "09:30", type: "demo", name: "デモ・ポスターセッション3" },
     { time: "11:00", type: "rest", name: "休憩" },
     { time: "11:10", type: "info", name: "投票・アンケート記入" },
