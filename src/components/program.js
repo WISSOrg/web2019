@@ -36,7 +36,7 @@ const schedule_info = {
     { time: "17:05", type: "talk", name: "トップカンファレンス発表論文紹介セッション" },
     { time: "18:05", type: "", name: "セッション終了" },
     { time: "18:30", type: "food", name: "夕食" },
-    { time: "??:??", type: "", name: "（TBA）" },
+    { time: "21:00", type: "night", name: "ナイトセッション" },
   ],
   "2": [
     { time: "09:00", type: "talk", name: "セッション2: " + session_info["2"]["name"] },
@@ -49,8 +49,9 @@ const schedule_info = {
     { time: "15:10", type: "talk", name: "セッション3: " + session_info["3"]["name"] },
     { time: "16:15", type: "rest", name: "休憩" },
     { time: "16:30", type: "talk", name: "セッション4: " + session_info["4"]["name"] },
-    { time: "17:50", type: "rest", name: "休憩" },
-    { time: "??:??", type: "", name: "（TBA）" },
+    { time: "17:50", type: "", name: "セッション終了" },
+    { time: "18:30", type: "food", name: "夕食" },
+    { time: "21:00", type: "night", name: "ナイトセッション" },
   ],
   "3": [
     { time: "09:00", type: "live", name: "デモ中継" },
@@ -68,6 +69,7 @@ const icon_map = {
   "food": "utensils",
   "rest": "coffee",
   "info": "info",
+  "night": "users",
 }
 
 const invited_talks = [
