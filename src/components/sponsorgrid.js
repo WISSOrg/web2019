@@ -8,6 +8,7 @@ import Dentsu from '../images/sponsors/dentsu.png';
 import Bnr from '../images/sponsors/bnr.jpg';
 import TeamLab from '../images/sponsors/teamlab.png';
 import Tis from '../images/sponsors/tis.jpg';
+import DelightWorks from '../images/sponsors/delightworks.jpg';
 import Future from '../images/sponsors/future.png';
 
 // Sponsor definitions
@@ -41,6 +42,11 @@ const sponsor_definitions = [
     name: "TIS株式会社",
     image: Tis,
     link: "https://www.tis.co.jp/",
+  },
+  {
+    name: "ディライトワークス株式会社",
+    image: DelightWorks,
+    link: "https://www.delightworks.co.jp/",
   },
   {
     name: "フューチャー株式会社",
