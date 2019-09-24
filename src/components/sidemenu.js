@@ -22,9 +22,9 @@ const contents = {
     <Link to="/demo-poster">デモ・ポスター発表</Link>,
   ],
   "動画中継": [
-    <span>１日目（準備中）</span>,
-    <span>２日目（準備中）</span>,
-    <span>３日目（準備中）</span>,
+    <a href="https://youtu.be/u9ozqzyyqCE">１日目</a>,
+    <a href="https://youtu.be/FosdqqL5cMM">２日目</a>,
+    <a href="https://youtu.be/XMzvm2ccFZA">３日目</a>,
   ],
   "予稿集": [
     <a href="https://www.wiss.org/WISS2019Proceedings/">ウェブ予稿集</a>,
