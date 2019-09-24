@@ -28,6 +28,7 @@ const contents = {
   ],
   "予稿集": [
     <a href="https://www.wiss.org/WISS2019Proceedings/">ウェブ予稿集</a>
+    <a href="https://www.wiss.org/WISS2019/download/proceedings.pdf/">電子予稿集 (PDF)</a>
   ],
   "WISSについて": [
     <a href="https://twitter.com/wiss_official">公式ツイッター</a>,
