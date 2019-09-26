@@ -10,7 +10,7 @@ const session_info = {
   "2": { name: "Shaping & Imaging", time: "2日目 09:00—10:15", session_chair: "横窪 安奈", chat_chair: "瀬川 典久" },
   "3": { name: "Feedback", time: "2日目 15:10—16:15", session_chair: "加藤 邦拓", chat_chair: "真鍋 宏幸" },
   "4": { name: "Touch & Drink", time: "2日目 16:30—17:50", session_chair: "加藤 淳", chat_chair: "宮下 芳明" },
-  "5": { name: "Long Teaser", time: "2日目 10:30—11:45", session_chair: "伊藤 貴之", chat_chair: "倉本 至" },
+  "5": { name: "Long Teaser", time: "2日目 10:30—11:45", session_chair: "伊藤 貴之", chat_chair: "倉本 到" },
   "6": { name: "トップカンファレンス発表論文紹介セッション", time: "1日目 17:05—18:05", session_chair: "伊藤 貴之", chat_chair: "入江 英嗣" },
 };
 
