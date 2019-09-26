@@ -86,7 +86,7 @@ const invited_talks = [
     "venue": "In Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems (CHI '19)",
   },
   {
-    "speaker": "尾形 正恭",
+    "speaker": "尾形 正泰",
     "title": "Magneto-Haptics: Embedding Magnetic Force Feedback for Physical Interactions",
     "authors": "Masa Ogata",
     "venue": "In Proceedings of the 31st Annual ACM Symposium on User Interface Software and Technology (UIST '18)",
